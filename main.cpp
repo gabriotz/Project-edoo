@@ -11,6 +11,8 @@ int main() {
     Livro* livro2 = new Livro("2", "1984", "George Orwell", "Distopia", 1949, true);
     Livro* livro3 = new Livro("3", "O Guia do Mochileiro das Galaxias", "Douglas Adams", "Ficcao Cientifica", 1979, false);
 
+    livro1->setUsado();
+    
     // Criar um acervo
     Acervo meuAcervo;
     std::cout << "\n"; // Para separar as mensagens

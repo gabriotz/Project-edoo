@@ -32,7 +32,7 @@ class Livro{
         
         bool getDisponibilidade() const;
         
-        void setDisponivel(bool status); 
+        void setDisponivel(); 
 
         void setUsado(); 
 };

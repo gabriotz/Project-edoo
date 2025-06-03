@@ -50,3 +50,4 @@ void Acervo::listarLivros() const{
 int Acervo::getTamanho() const { // Se a intenção for o tamanho total. Removi o parâmetro idLivro.
     return AcervoLivros.size();
 }
+
