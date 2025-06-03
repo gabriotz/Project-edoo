@@ -18,13 +18,12 @@ class Usuario : public Acervo {
         Usuario(std::string& uLogin,std::string& uSenha) : Acervo(), login(uLogin), senha(uSenha){
 
         }
-        std:: string getLogin() const{
-            return login;
-        }
-        std:: string getSenha() const{
-            return senha;
-        }
-        
+        std:: string getLogin() const{}
+
+        std:: string getSenha() const{}
+
+        bool verificarLogin(const std::string& tentativaLogin,const std::string& tentativaSenha) const{}
+
 
 };
 
