@@ -8,15 +8,14 @@
             "args": [
                 "-g",
                 "-std=c++17",
-                "main.cpp",       // Caminho relativo à pasta 'projeto edoo'
+                "main.cpp",
                 "livros.cpp",
                 "acervo.cpp",
+                "usuario.cpp",   // <<< MOVIDO PARA CÁ
                 "-o",
-                "programa_edoo"   // O executável será criado em 'projeto edoo/programa_edoo.exe'
+                "programa_edoo"  // Nome do executável
             ],
-            // A opção "cwd" (current working directory) não é mais necessária aqui,
-            // pois o padrão já é ${workspaceFolder}, que será "projeto edoo".
-            // Se quiser ser explícito: "options": { "cwd": "${workspaceFolder}" },
+            // "options": { "cwd": "${workspaceFolder}" }, // Opcional, pois é o padrão
             "group": {
                 "kind": "build",
                 "isDefault": true

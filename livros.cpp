@@ -44,10 +44,10 @@ void Livro::resumo() const {
 }
 
 // Implementação dos Métodos Setters
-void Livro::setDisponivel(bool status) {
-    disponivel = status;
+void Livro::setDisponivel() {
+    disponivel = true;
 }
 
 void Livro::setUsado() {
-    setDisponivel(false); // Reutiliza o método setDisponivel
+    disponivel = false; // Reutiliza o método setDisponivel
 }
