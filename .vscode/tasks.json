@@ -1,0 +1,36 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Projeto EDOO (g++)",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "-std=c++17",
+                "main.cpp",
+                "livros.cpp",
+                "acervo.cpp",
+                "usuario.cpp",   // <<< MOVIDO PARA CÁ
+                "-o",
+                "programa_edoo"  // Nome do executável
+            ],
+            // "options": { "cwd": "${workspaceFolder}" }, // Opcional, pois é o padrão
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ]
+}
