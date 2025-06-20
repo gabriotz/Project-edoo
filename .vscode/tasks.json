@@ -11,11 +11,11 @@
                 "main.cpp",
                 "livros.cpp",
                 "acervo.cpp",
-                "usuario.cpp",   // <<< MOVIDO PARA CÁ
+                "usuario.cpp",
+                "cadastros.cpp",  // <-- ADICIONE ESTA LINHA
                 "-o",
-                "programa_edoo"  // Nome do executável
+                "programa_edoo.exe" // Adicionei .exe para maior clareza no Windows
             ],
-            // "options": { "cwd": "${workspaceFolder}" }, // Opcional, pois é o padrão
             "group": {
                 "kind": "build",
                 "isDefault": true

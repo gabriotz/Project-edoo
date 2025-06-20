@@ -20,6 +20,18 @@ void Acervo::adicionarLivro(Livro* novoLivro){
     }
 }
 
+Livro* Acervo::buscarLivroPorId(const std::string& idLivro) const {
+    for (Livro* livro : AcervoLivros) {
+        if (livro != nullptr && livro->getId() == idLivro) {
+            return livro; 
+        }
+    }
+    return nullptr; 
+}
+
+
+
+
 bool Acervo::removerLivro(const std::string& idLivro) { 
     for (size_t i = 0; i < AcervoLivros.size(); ++i) {    
         if (AcervoLivros[i] != nullptr && AcervoLivros[i]->getId() == idLivro) { 

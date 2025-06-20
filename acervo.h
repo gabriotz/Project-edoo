@@ -13,7 +13,9 @@ private:
     vector<Livro*> AcervoLivros;
 public:
     Acervo();
-
+    
+    Livro* buscarLivroPorId(const std::string& idLivro) const;
+    
     void adicionarLivro(Livro* novoLivro);
 
     bool removerLivro(const std::string& idLivro);
