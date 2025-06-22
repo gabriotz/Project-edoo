@@ -7,12 +7,13 @@
 #include <iostream>
 
 class Usuario  {
-private:
+protected:
     std::string login;
     std::string senha;        
     std::vector<Livro*> livrosEmprestados;
 public:
-    
+    virtual ~Usuario() = default;    
+
     Usuario(const std::string& uLogin, const std::string& uSenha);
     
 
@@ -24,6 +25,9 @@ public:
     std::string getLogin() const;
     std::string getSenha() const;
     bool verificarLogin(const std::string& tentativaLogin, const std::string& tentativaSenha) const;
+
+    virtual int getLimiteEmprestimo() const = 0;
+    virtual std::string getTipoUsuario() const = 0;
 };
 
 #endif

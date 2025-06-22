@@ -59,3 +59,18 @@ int Cadastros::getTamanho() const{
     return cadastrosUsuarios.size();
 }
 
+Usuario* Cadastros::buscarUsuarioPorLogin(const std::string& login) const {
+    for (Usuario* usuario : cadastrosUsuarios) {
+        if (usuario != nullptr && usuario->getLogin() == login) {
+            return usuario; // Retorna o ponteiro para o usuário encontrado
+        }
+    }
+    return nullptr; // Retorna nullptr se não encontrar o usuário
+}
+
+Cadastros::~Cadastros() {
+    std::cout << "Destruindo a lista de cadastros e liberando a memória dos usuários..." << std::endl;
+    for (Usuario* usuario : cadastrosUsuarios) {
+        delete usuario; // Deleta cada objeto usuário alocado com 'new'
+    }
+}

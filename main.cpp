@@ -1,135 +1,163 @@
 #include <iostream>
 #include <string>
+#include <vector>
+#include <locale.h>
+#include <limits> 
 
-// Inclua os cabeçalhos do seu projeto (sem as classes de polimorfismo)
 #include "acervo.h"
-#include "usuario.h"
+#include "cadastros.h"
+#include "aluno.h"
+#include "professor.h"
 #include "livros.h"
 
-// Função auxiliar para organizar a saída no terminal
+
 void imprimirLinhaDivisoria() {
     std::cout << "========================================================" << std::endl;
 }
 
 int main() {
+
     Acervo biblioteca;
-    imprimirLinhaDivisoria();
-    std::cout << "INICIANDO SIMULACAO COM AUTENTICACAO OBRIGATORIA" << std::endl;
-    
-    for(int i = 0 ; i<3; i++){
-        string nome;
-        string autor;
-        string tema;
-        int ano;
-        cout << "vamos criar usuarios" << endl;
-        getline (cin,nome);
-        getline (cin,autor);
-        getline (cin,tema);
-        cin >> ano;
-        cin.ignore();
-        int tamanho = biblioteca.getTamanho();
-        string id = "l" + std::to_string(tamanho);        
-        biblioteca.adicionarLivro(new Livro(id, nome, autor, tema, ano, true));
-    }
-    biblioteca.listarLivros();
-    
-    
-    
-    
-    
-    
-    
-    imprimirLinhaDivisoria();
+    Cadastros sistemaUsuarios;
+    int escolha;
 
+    while (true) {
+        imprimirLinhaDivisoria();
+        std::cout << "SISTEMA DE GERENCIAMENTO DA BIBLIOTECA\n";
+        std::cout << "1. Adicionar novo Livro\n";
+        std::cout << "2. Adicionar novo Usuario\n";
+        std::cout << "3. Listar todos os Livros no Acervo\n";
+        std::cout << "4. Listar todos os Usuarios Cadastrados\n";
+        std::cout << "5. Rodar Simulacao de Emprestimo e Devolucao\n";
+        std::cout << "0. Sair\n";
+        std::cout << "Escolha uma opcao: ";
+        std::cin >> escolha;
 
+        // Limpa o buffer do teclado. Essencial após usar 'cin >>' para que 'getline' funcione corretamente depois.
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
+        switch (escolha) {
+            case 1: { // Adicionar Livro
+                std::string nome, autor, tema;
+                int ano;
+                int tamanho;
+                std::string id;
 
+                std::cout << "\n--- Cadastro de Novo Livro ---\n";
+                std::cout << "Digite o nome: ";
+                std::getline(std::cin, nome);
 
+                if (nome.empty()) {
+                    std::cout << "ERRO: Nome do livro nao pode ser vazio.\n";
+                    break;
+                }
 
+                std::cout << "Digite o autor: ";
+                std::getline(std::cin, autor);
+                std::cout << "Digite o tema: ";
+                std::getline(std::cin, tema);
+                std::cout << "Digite o ano de lancamento: ";
+                std::cin >> ano;
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Limpa o buffer de novo
 
+                tamanho = biblioteca.getTamanho();
+                id = "L" + std::to_string(tamanho + 10); // Lógica de ID para não colidir com os de teste
+                biblioteca.adicionarLivro(new Livro(id, nome, autor, tema, ano, true));
+                break;
+            }
+            case 2: { // Adicionar Usuario
+                int tipoUsuario;
+                std::string login, senha;
 
+                std::cout << "\n--- Cadastro de Novo Usuario ---\n";
+                std::cout << "Digite o tipo (1 para Aluno, 2 para Professor): ";
+                std::cin >> tipoUsuario;
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
-    // 1. CRIAÇÃO DO CENÁRIO
-    
-    biblioteca.adicionarLivro(new Livro("L01", "A Guerra dos Tronos", "George R. R. Martin", "Fantasia", 1996, true));
-    biblioteca.adicionarLivro(new Livro("L02", "Duna", "Frank Herbert", "Ficcao Cientifica", 1965, true));
-    
-    // Usuário com credenciais que usaremos para testar
-    Usuario usuario("ana.silva", "pass123");
+                std::cout << "Digite o login: ";
+                std::getline(std::cin, login);
+                std::cout << "Digite a senha: ";
+                std::getline(std::cin, senha);
 
-    std::cout << "\n--- ESTADO INICIAL DO ACERVO DA BIBLIOTECA ---\n" << std::endl;
-    biblioteca.listarLivros();
-    imprimirLinhaDivisoria();
+                if (tipoUsuario == 1) {
+                    sistemaUsuarios.adicionarUsuario(new Aluno(login, senha));
+                } else if (tipoUsuario == 2) {
+                    sistemaUsuarios.adicionarUsuario(new Professor(login, senha));
+                } else {
+                    std::cout << "ERRO: Tipo de usuario invalido.\n";
+                }
+                break;
+            }
+            case 3: { // Listar Livros
+                std::cout << "\n";
+                biblioteca.listarLivros();
+                break;
+            }
+            case 4: { // Listar Usuarios
+                std::cout << "\n";
+                sistemaUsuarios.listarUsuarios(); // Supondo que você tenha um método para listar usuários
+                break;
+            }
+            case 5: { // Rodar Simulação
+                std::string loginTeste, idLivroTeste;
+                std::cout << "\n--- Simulacao de Emprestimo ---\n";
+                std::cout << "Digite o login do usuario que fara o emprestimo: ";
+                std::getline(std::cin, loginTeste);
+                std::cout << "Digite o ID do livro a ser emprestado: ";
+                std::getline(std::cin, idLivroTeste);
 
-    // =================================================================
-    // TESTE 1: TENTATIVA DE EMPRÉSTIMO COM LOGIN INCORRETO
-    // =================================================================
-    std::cout << ">>> TENTATIVA 1: Emprestar 'Duna' (L02) com SENHA ERRADA." << std::endl;
+                Usuario* u = sistemaUsuarios.buscarUsuarioPorLogin(loginTeste);
+                Livro* l = biblioteca.buscarLivroPorId(idLivroTeste);
 
-    // A. O "portão": a verificação de login
-    if (usuario.verificarLogin("ana.silva", "senha_errada")) {
-        // Este bloco não deve ser executado
-        std::cout << "   [ERRO INESPERADO] Login passou com credenciais erradas." << std::endl;
-    } else {
-        // Este bloco DEVE ser executado
-        std::cout << "   [SUCESSO NO TESTE] Falha na autenticacao. O emprestimo foi bloqueado, como esperado." << std::endl;
-    }
-    imprimirLinhaDivisoria();
+                if (!u) {
+                    std::cout << "FALHA: Usuario '" << loginTeste << "' nao encontrado.\n";
+                    break;
+                }
+                if (!l) {
+                    std::cout << "FALHA: Livro com ID '" << idLivroTeste << "' nao encontrado.\n";
+                    break;
+                }
 
-    // =================================================================
-    // TESTE 2: TENTATIVA DE EMPRÉSTIMO COM LOGIN CORRETO
-    // =================================================================
-    std::cout << ">>> TENTATIVA 2: Emprestar 'Duna' (L02) com CREDENCIAIS CORRETAS." << std::endl;
-    
-    // A. Verificação do login novamente, agora com os dados corretos
-    if (usuario.verificarLogin("ana.silva", "pass123")) {
-        std::cout << "   [INFO] Autenticacao bem-sucedida. Prosseguindo com a logica de emprestimo..." << std::endl;
-        
-        // B. LÓGICA DE EMPRÉSTIMO (SÓ EXECUTA APÓS LOGIN VÁLIDO)
-        Livro* livroParaEmprestar = biblioteca.buscarLivroPorId("L02");
+                std::cout << "\n>>> TENTANDO EMPRESTAR '" << l->getNome() << "' PARA '" << u->getLogin() << "'...\n";
+                if (u->getQuantidadeLivros() < u->getLimiteEmprestimo()) {
+                    if (l->getDisponibilidade()) {
+                        l->setUsado();
+                        u->pegarLivroEmprestado(l);
+                        std::cout << "SUCESSO! Emprestimo realizado.\n";
+                    } else {
+                        std::cout << "FALHA! O livro ja esta emprestado.\n";
+                    }
+                } else {
+                    std::cout << "FALHA! O usuario ja atingiu seu limite de emprestimos.\n";
+                }
+                
+                imprimirLinhaDivisoria();
+                std::cout << "Estado atual do usuario:\n";
+                u->listarLivrosDoUsuario(); // Apenas esta chamada é necessária.
+                // l->resumo(); // ESTA LINHA FOI REMOVIDA PARA CORRIGIR A DUPLICIDADE
+                imprimirLinhaDivisoria();
 
-        if (livroParaEmprestar && livroParaEmprestar->getDisponibilidade()) {
-            std::cout << "   [SUCESSO] Livro encontrado e disponivel. Emprestimo realizado." << std::endl;
-            livroParaEmprestar->setUsado();
-            usuario.pegarLivroEmprestado(livroParaEmprestar);
-        } else if (livroParaEmprestar) {
-            std::cout << "   [FALHA] O livro foi encontrado, mas ja esta emprestado." << std::endl;
-        } else {
-            std::cout << "   [FALHA] Livro nao encontrado no acervo." << std::endl;
+                std::cout << "\n>>> DEVOLVENDO O LIVRO AGORA...\n";
+                Livro* livroDevolvido = u->devolverLivro(idLivroTeste);
+                if (livroDevolvido) {
+                    livroDevolvido->setDisponivel();
+                    std::cout << "SUCESSO! Livro devolvido ao acervo.\n";
+                } else {
+                    std::cout << "FALHA! O usuario nao possuia este livro.\n";
+                }
+
+                break;
+            }
+            case 0: { // Sair
+                std::cout << "\nEncerrando o programa...\n";
+                return 0; // Sai do loop e da função main
+            }
+            default: {
+                std::cout << "Opcao invalida. Tente novamente.\n";
+                break;
+            }
         }
-
-    } else {
-        // Este bloco não deve ser executado
-        std::cout << "   [ERRO INESPERADO] Falha na autenticacao com credenciais corretas." << std::endl;
     }
-
-    std::cout << "\n--- ESTADO APOS TENTATIVAS DE EMPRESTIMO ---\n" << std::endl;
-    std::cout << "Acervo completo da biblioteca:" << std::endl;
-    biblioteca.listarLivros();
-    std::cout << std::endl;
-    usuario.listarLivrosDoUsuario();
-    imprimirLinhaDivisoria();
-
-    // =================================================================
-    // TESTE 3: DEVOLUÇÃO DO LIVRO
-    // =================================================================
-    std::cout << ">>> ACAO: Devolver o livro 'Duna' (ID: L02)..." << std::endl;
-
-    Livro* livroDevolvido = usuario.devolverLivro("L02");
-
-    if (livroDevolvido) {
-        livroDevolvido->setDisponivel();
-        std::cout << "   [SUCESSO] Livro '" << livroDevolvido->getNome() << "' foi devolvido e seu status atualizado para disponivel." << std::endl;
-    } else {
-        std::cout << "   [FALHA] Usuario nao tinha este livro para devolver." << std::endl;
-    }
-
-    std::cout << "\n--- ESTADO FINAL DO SISTEMA ---\n" << std::endl;
-    biblioteca.listarLivros();
-    imprimirLinhaDivisoria();
-
-    // Lembrete sobre o gerenciamento de memória...
-    // A classe Acervo deve ter um destrutor para deletar os ponteiros de Livro.
 
     return 0;
 }

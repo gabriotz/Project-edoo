@@ -2,7 +2,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Build Projeto EDOO (g++)",
+            "label": "Build Projeto Biblioteca (g++)",
             "type": "shell",
             "command": "g++",
             "args": [
@@ -12,9 +12,11 @@
                 "livros.cpp",
                 "acervo.cpp",
                 "usuario.cpp",
-                "cadastros.cpp",  // <-- ADICIONE ESTA LINHA
+                "cadastros.cpp",
+                "aluno.cpp",      
+                "professor.cpp",  
                 "-o",
-                "programa_edoo.exe" // Adicionei .exe para maior clareza no Windows
+                "programa_edoo.exe"
             ],
             "group": {
                 "kind": "build",

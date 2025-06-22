@@ -12,6 +12,7 @@ private:
     vector<Usuario*> cadastrosUsuarios;
 public:
     Cadastros();
+    ~Cadastros();
 
     void adicionarUsuario(Usuario* novoUsuario);
 
@@ -21,6 +22,7 @@ public:
 
     void listarUsuarios() const;
 
+    Usuario* buscarUsuarioPorLogin(const std::string& login) const; // <-- ADICIONE ESTA LINHA
     
 
 
