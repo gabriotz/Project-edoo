@@ -12,3 +12,7 @@ int Professor::getLimiteEmprestimo() const {
 std::string Professor::getTipoUsuario() const {
     return "Professor";
 }
+
+int Professor::getNivelPrioridade() const{
+    return 1;
+}

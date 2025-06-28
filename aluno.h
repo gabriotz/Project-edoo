@@ -9,6 +9,7 @@ public:
 
     int getLimiteEmprestimo() const override;
     std::string getTipoUsuario() const override;
+    int getNivelPrioridade() const override; 
 };
 
 #endif

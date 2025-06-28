@@ -12,3 +12,7 @@ int Aluno::getLimiteEmprestimo() const {
 std::string Aluno::getTipoUsuario() const {
     return "Aluno";
 }
+
+int Aluno::getNivelPrioridade() const{
+    return 2; 
+}

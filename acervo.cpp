@@ -13,10 +13,9 @@ Acervo::Acervo() {
 void Acervo::adicionarLivro(Livro* novoLivro){
     if (novoLivro != nullptr){
         AcervoLivros.push_back(novoLivro);
-        cout << "Livro '" << novoLivro->getNome() << "' adicionado ao acervo." << endl;
-    }
-    else{
-        cout << "Erro: Tentativa de adicionar um livro nulo." << endl;
+        std::cout << "Livro '" << novoLivro->getNome() << "' (ID: " << novoLivro->getId() << ") adicionado ao acervo." << std::endl;
+    } else {
+        std::cout << "Erro: Tentativa de adicionar um livro nulo." << std::endl;
     }
 }
 
@@ -28,8 +27,6 @@ Livro* Acervo::buscarLivroPorId(const std::string& idLivro) const {
     }
     return nullptr; 
 }
-
-
 
 
 bool Acervo::removerLivro(const std::string& idLivro) { 
@@ -46,15 +43,16 @@ bool Acervo::removerLivro(const std::string& idLivro) {
     return false;
 }
 
-void Acervo::listarLivros() const{
-    if (AcervoLivros.empty()){
+void Acervo::listarLivros() const {
+    if (AcervoLivros.empty()) {
         cout << "O acervo de livros está vazio!" << endl;
         return;
     }
-    else{
-        cout<< "Os livros no acervo são: ";
-        for (Livro* livro : AcervoLivros){
-            std::cout << "- " << livro->getNome() << " (ID: " << livro->getId() << ")" << std::endl;
+    cout << "--- Acervo Completo da Biblioteca ---" << endl;
+    for (const Livro* livro : AcervoLivros) {
+        if (livro) {
+            cout << "- ";
+            livro->resumo(); // Mude para usar o resumo completo!
         }
     }
 }

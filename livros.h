@@ -3,7 +3,10 @@
 
 #include <string> 
 #include <iostream>
+#include <list>
 using namespace std;
+
+class Usuario;
 
 class Livro{
     private:
@@ -13,7 +16,7 @@ class Livro{
         string tema;
         int lancamento;
         bool disponivel;
-        
+        std::list<Usuario*> filaDeEspera;        
 
 
     public:
@@ -36,6 +39,12 @@ class Livro{
         void setDisponivel(); 
 
         void setUsado(); 
+
+        void adicionarNaFila(Usuario* usuario);
+
+        Usuario* proximoDaFila();
+        
+        void verFilaDeEspera() const;
 };
 
 #endif 

@@ -1,5 +1,6 @@
 
 #include "livros.h" 
+#include "usuario.h"
 #include <iostream>  
 
 
@@ -36,18 +37,56 @@ bool Livro::getDisponibilidade() const {
     return disponivel;
 }
 
-// Implementação do método resumo() (com 'const' para corresponder à declaração)
 void Livro::resumo() const {
-    cout << "O livro '" << nome << "' sobre '" << tema
-         << "' foi lancado em " << lancamento << " pelo autor " << autor
-         << ". Status: " << (disponivel ? "Disponivel" : "Emprestado") << endl; // Adicionei status
+    std::cout << "'" << nome << "' por " << autor
+              << " | ID: " << id
+              << " | Status: " << (disponivel ? "Disponivel" : "Emprestado") << std::endl;
 }
 
-// Implementação dos Métodos Setters
 void Livro::setDisponivel() {
     disponivel = true;
 }
 
 void Livro::setUsado() {
-    disponivel = false; // Reutiliza o método setDisponivel
+    disponivel = false; 
+}
+
+void Livro::adicionarNaFila(Usuario* novoUsuario) {
+    auto it = filaDeEspera.begin();
+    while (it != filaDeEspera.end()) {
+        // Se a prioridade for menor (número maior), continua procurando:
+        if (novoUsuario->getNivelPrioridade() > (*it)->getNivelPrioridade()) {
+            ++it;
+        }else{
+            // Encontrou a posição correta (prioridade maior ou igual), insere antes e sai
+            filaDeEspera.insert(it, novoUsuario);
+            std::cout << "  [INFO] Usuario " << novoUsuario->getLogin() << " adicionado a fila de espera.\n";
+            return;        
+        }
+    }
+
+    // Se o loop terminar, o usuário tem a menor prioridade, então é inserido no final
+    filaDeEspera.push_back(novoUsuario);
+    std::cout << "  [INFO] Usuario " << novoUsuario->getLogin() << " adicionado ao final da fila de espera.\n";
+}
+
+Usuario* Livro::proximoDaFila(){
+    if (filaDeEspera.empty()){
+        return nullptr;
+    }
+    Usuario* proximo = filaDeEspera.front();
+    filaDeEspera.pop_front(); // Remove da fila
+    return proximo;
+}
+
+void Livro::verFilaDeEspera() const {
+    std::cout << "  --- Fila de Espera para '" << this->nome << "' ---\n";
+    if (filaDeEspera.empty()) {
+        std::cout << "  A fila de espera esta vazia.\n";
+    } else {
+        int pos = 1;
+        for (const auto& usuario : filaDeEspera) {
+            std::cout << "  " << pos++ << ". " << usuario->getLogin() << " (Tipo: " << usuario->getTipoUsuario() << ")\n";
+        }
+    }
 }

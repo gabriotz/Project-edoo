@@ -4,7 +4,6 @@
 Usuario::Usuario(const std::string& uLogin, const std::string& uSenha)
     : login(uLogin), senha(uSenha){
     
-    std::cout << "Usuário '" << login << "' criado." << std::endl;
 }
     
 
@@ -18,6 +17,17 @@ std::string Usuario::getSenha() const {
 
 bool Usuario::verificarLogin(const std::string& tentativaLogin, const std::string& tentativaSenha) const {
     return (tentativaLogin == login) && (tentativaSenha == senha); 
+}
+
+bool Usuario::alterarSenha(const std::string& senhaAtual, const std::string& novaSenha) {
+    if (this->senha == senhaAtual) {
+        this->senha = novaSenha;
+        std::cout << "  [SUCESSO] Senha alterada.\n";
+        return true;
+    } else {
+        std::cout << "  [FALHA] A senha atual fornecida está incorreta.\n";
+        return false;
+    }
 }
 
 void Usuario::pegarLivroEmprestado(Livro* livro){
@@ -38,7 +48,7 @@ Livro* Usuario::devolverLivro(const std::string& idLivro) {
     }
     return nullptr; 
 }
-void Usuario::listarLivrosDoUsuario() const { // <-- O 'const' ESTÁ AQUI
+void Usuario::listarLivrosDoUsuario() const { 
     std::cout << "Livros com o usuário '" << this->login << "':" << std::endl;
     if (this->livrosEmprestados.empty()) {
         std::cout << "- Nenhum livro emprestado." << std::endl;

@@ -10,12 +10,12 @@
 #include "professor.h"
 #include "livros.h"
 
-
 void imprimirLinhaDivisoria() {
     std::cout << "========================================================" << std::endl;
 }
 
 int main() {
+    setlocale(LC_ALL, "Portuguese_Brazil.1252");
 
     Acervo biblioteca;
     Cadastros sistemaUsuarios;
@@ -95,62 +95,92 @@ int main() {
             }
             case 4: { // Listar Usuarios
                 std::cout << "\n";
-                sistemaUsuarios.listarUsuarios(); // Supondo que você tenha um método para listar usuários
+                sistemaUsuarios.listarUsuarios();
                 break;
             }
-            case 5: { // Rodar Simulação
+            case 5: { // Rodar Simulação de Empréstimo e Devolução
                 std::string loginTeste, idLivroTeste;
-                std::cout << "\n--- Simulacao de Emprestimo ---\n";
-                std::cout << "Digite o login do usuario que fara o emprestimo: ";
+                char acao;
+
+                std::cout << "\n--- Simulacao ---";
+                std::cout << "\nDigite o login do usuario: ";
                 std::getline(std::cin, loginTeste);
-                std::cout << "Digite o ID do livro a ser emprestado: ";
+                std::cout << "Digite o ID do livro: ";
                 std::getline(std::cin, idLivroTeste);
 
+                // Etapa 1: Validar se o usuário e o livro existem
                 Usuario* u = sistemaUsuarios.buscarUsuarioPorLogin(loginTeste);
-                Livro* l = biblioteca.buscarLivroPorId(idLivroTeste);
-
                 if (!u) {
                     std::cout << "FALHA: Usuario '" << loginTeste << "' nao encontrado.\n";
                     break;
                 }
+                Livro* l = biblioteca.buscarLivroPorId(idLivroTeste);
                 if (!l) {
                     std::cout << "FALHA: Livro com ID '" << idLivroTeste << "' nao encontrado.\n";
                     break;
                 }
 
-                std::cout << "\n>>> TENTANDO EMPRESTAR '" << l->getNome() << "' PARA '" << u->getLogin() << "'...\n";
-                if (u->getQuantidadeLivros() < u->getLimiteEmprestimo()) {
+                // Etapa 2: Perguntar a ação desejada
+                std::cout << "O que deseja fazer com o livro '" << l->getNome() << "'? (E para Emprestar, D para Devolver): ";
+                std::cin >> acao;
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+                // Etapa 3: Executar a lógica baseada na ação
+                if (acao == 'E' || acao == 'e') {
+                    // --- LÓGICA DE EMPRÉSTIMO ---
+                    std::cout << "\n>>> TENTANDO EMPRESTAR '" << l->getNome() << "' PARA '" << u->getLogin() << "'...\n";
+                    
                     if (l->getDisponibilidade()) {
-                        l->setUsado();
-                        u->pegarLivroEmprestado(l);
-                        std::cout << "SUCESSO! Emprestimo realizado.\n";
+                        // Caminho 1: O livro está disponível
+                        if (u->getQuantidadeLivros() < u->getLimiteEmprestimo()) {
+                            l->setUsado();
+                            u->pegarLivroEmprestado(l);
+                            std::cout << "SUCESSO! Emprestimo realizado.\n";
+                        } else {
+                            std::cout << "FALHA! O usuario ja atingiu seu limite de " << u->getLimiteEmprestimo() << " emprestimos.\n";
+                        }
                     } else {
+                        // Caminho 2: O livro está emprestado, oferecer fila de espera
                         std::cout << "FALHA! O livro ja esta emprestado.\n";
+                        l->verFilaDeEspera();
+                        char entrarNaFila;
+                        std::cout << "Deseja entrar na fila de espera? (S/N): ";
+                        std::cin >> entrarNaFila;
+                        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                        if (entrarNaFila == 'S' || entrarNaFila == 's') {
+                            l->adicionarNaFila(u);
+                        }
+                    }
+                } else if (acao == 'D' || acao == 'd') {
+                    // --- LÓGICA DE DEVOLUÇÃO ---
+                    std::cout << "\n>>> TENTANDO DEVOLVER '" << l->getNome() << "'...\n";
+                    
+                    Livro* livroDevolvido = u->devolverLivro(l->getId());
+                    if (livroDevolvido) {
+                        // Verifica se há alguém na fila de espera PELO LIVRO devolvido
+                        Usuario* proximoDaFila = livroDevolvido->proximoDaFila();
+                        
+                        if (proximoDaFila) {
+                            // Se houver, o livro é automaticamente emprestado para essa pessoa
+                            proximoDaFila->pegarLivroEmprestado(livroDevolvido);
+                            // O livro continua com o status 'usado'
+                            std::cout << "SUCESSO! Livro devolvido e automaticamente emprestado para o proximo da fila: " << proximoDaFila->getLogin() << ".\n";
+                        } else {
+                            // Se não houver ninguém na fila, o livro fica disponível
+                            livroDevolvido->setDisponivel();
+                            std::cout << "SUCESSO! Livro devolvido e agora esta disponivel no acervo.\n";
+                        }
+                    } else {
+                        std::cout << "FALHA! O usuario '" << u->getLogin() << "' nao possuia este livro para devolver.\n";
                     }
                 } else {
-                    std::cout << "FALHA! O usuario ja atingiu seu limite de emprestimos.\n";
+                    std::cout << "ERRO: Acao invalida. Escolha 'E' ou 'D'.\n";
                 }
-                
-                imprimirLinhaDivisoria();
-                std::cout << "Estado atual do usuario:\n";
-                u->listarLivrosDoUsuario(); // Apenas esta chamada é necessária.
-                // l->resumo(); // ESTA LINHA FOI REMOVIDA PARA CORRIGIR A DUPLICIDADE
-                imprimirLinhaDivisoria();
-
-                std::cout << "\n>>> DEVOLVENDO O LIVRO AGORA...\n";
-                Livro* livroDevolvido = u->devolverLivro(idLivroTeste);
-                if (livroDevolvido) {
-                    livroDevolvido->setDisponivel();
-                    std::cout << "SUCESSO! Livro devolvido ao acervo.\n";
-                } else {
-                    std::cout << "FALHA! O usuario nao possuia este livro.\n";
-                }
-
                 break;
             }
             case 0: { // Sair
                 std::cout << "\nEncerrando o programa...\n";
-                return 0; // Sai do loop e da função main
+                return 0; 
             }
             default: {
                 std::cout << "Opcao invalida. Tente novamente.\n";

@@ -25,9 +25,13 @@ public:
     std::string getLogin() const;
     std::string getSenha() const;
     bool verificarLogin(const std::string& tentativaLogin, const std::string& tentativaSenha) const;
+    bool alterarSenha(const std::string& senhaAtual, const std::string& novaSenha);
+
 
     virtual int getLimiteEmprestimo() const = 0;
     virtual std::string getTipoUsuario() const = 0;
+
+    virtual int getNivelPrioridade() const = 0; // 1 = alta prioridade, 2 = baixa, etc.
 };
 
 #endif
