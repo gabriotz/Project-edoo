@@ -52,12 +52,16 @@ void Acervo::listarLivros() const {
     for (const Livro* livro : AcervoLivros) {
         if (livro) {
             cout << "- ";
-            livro->resumo(); // Mude para usar o resumo completo!
+            livro->getResumo(); 
         }
     }
 }
 
-int Acervo::getTamanho() const { // Se a intenção for o tamanho total. Removi o parâmetro idLivro.
+Livro* Acervo::buscarLivroPorIndice(int indice) const {
+    return AcervoLivros[indice];
+}
+
+int Acervo::getTamanho() const { 
     return AcervoLivros.size();
 }
 

@@ -57,7 +57,7 @@ void Usuario::listarLivrosDoUsuario() const {
     for (const Livro* livro : this->livrosEmprestados) {
         // Usa o método resumo() do livro para mostrar os detalhes
         if (livro) {
-            livro->resumo();
+            livro->getResumo();
         }
     }
 }

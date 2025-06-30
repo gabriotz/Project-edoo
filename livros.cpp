@@ -37,10 +37,11 @@ bool Livro::getDisponibilidade() const {
     return disponivel;
 }
 
-void Livro::resumo() const {
-    std::cout << "'" << nome << "' por " << autor
-              << " | ID: " << id
-              << " | Status: " << (disponivel ? "Disponivel" : "Emprestado") << std::endl;
+string Livro::getResumo() const {
+    std::string status = disponivel ? "Disponível" : "Emprestado";
+    return "'" + nome + "' por " + autor +
+           "\nTema: " + tema +
+           "\nID: " + id + " | Status: " + status;
 }
 
 void Livro::setDisponivel() {

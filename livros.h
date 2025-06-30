@@ -22,7 +22,7 @@ class Livro{
     public:
         Livro(string id, string nome, string autor, string tema, int lancamento, bool disponivel);
 
-        void resumo() const;       
+        string getResumo() const;       
 
         string getId() const;
 

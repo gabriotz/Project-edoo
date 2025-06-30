@@ -5,15 +5,14 @@
             "name": "Executar/Debug Projeto EDOO (g++)",
             "type": "cppdbg",
             "request": "launch",
-            // Caminho para o programa executável, relativo a 'projeto edoo'
-            "program": "${workspaceFolder}/programa_edoo.exe", // Adicione .exe se estiver no Windows
+            "program": "${workspaceFolder}/programa_edoo.exe",
             "args": [],
             "stopAtEntry": false,
-            "cwd": "${workspaceFolder}", // O diretório de trabalho para o programa é 'projeto edoo'
+            "cwd": "${workspaceFolder}",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
-            "miDebuggerPath": "gdb.exe", // Ou o caminho completo se gdb.exe não estiver no PATH
+            "miDebuggerPath": "gdb.exe",
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",
@@ -21,7 +20,8 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "Build Projeto EDOO (g++)" // Deve corresponder ao 'label' no tasks.json
+            "preLaunchTask": "Build Projeto EDOO (g++)",
+            "visualizerFile": "c:\\Users\\gmome\\AppData\\Roaming\\Code\\User\\workspaceStorage\\25ae1e106dfb4344e38ebd228ea3073e\\tonka3000.qtvsctools\\qt.natvis.xml"
         }
     ]
 }

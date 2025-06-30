@@ -50,5 +50,6 @@
         "typeinfo": "cpp",
         "variant": "cpp",
         "list": "cpp"
-    }
+    },
+    "cmake.sourceDirectory": "C:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA"
 }

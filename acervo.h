@@ -24,6 +24,7 @@ public:
 
     void listarLivros() const;
 
+    Livro* buscarLivroPorIndice(int indice) const;
     
 
 

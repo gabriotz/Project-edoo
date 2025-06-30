@@ -1,0 +1,64 @@
+cmake_minimum_required(VERSION 3.19)
+project(GUI_BIBLIOTECA LANGUAGES CXX)
+
+find_package(Qt6 6.5 REQUIRED COMPONENTS Core Widgets)
+
+qt_standard_project_setup()
+
+# VERSÃO CORRETA do bloco em CMakeLists.txt
+
+# VERSÃO CORRETA do bloco em CMakeLists.txt
+
+qt_add_executable(GUI_BIBLIOTECA
+    WIN32 MACOSX_BUNDLE
+
+    # Frontend
+    main.cpp
+    mainwindow.cpp
+    mainwindow.ui
+    mainwindow.h  # <--- incorreto
+    loginwindow.cpp
+    loginwindow.ui
+    loginwindow.h   # <--- incorreto
+    registrationwindow.cpp
+    registrationwindow.ui
+    registrationwindow.h # <--- incorreto
+    addbookwindow.h addbookwindow.cpp addbookwindow.ui
+    seeallbookswindow.h seeallbookswindow.cpp seeallbookswindow.ui
+
+    # Backend
+    ../cadastros.cpp
+      
+    ../usuario.cpp
+       
+    ../aluno.cpp
+         
+    ../professor.cpp
+     
+    ../acervo.cpp
+       
+    ../livros.cpp
+    
+    
+        
+)
+target_link_libraries(GUI_BIBLIOTECA
+    PRIVATE
+        Qt::Core
+        Qt::Widgets
+)
+
+include(GNUInstallDirs)
+
+install(TARGETS GUI_BIBLIOTECA
+    BUNDLE  DESTINATION .
+    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+)
+
+qt_generate_deploy_app_script(
+    TARGET GUI_BIBLIOTECA
+    OUTPUT_SCRIPT deploy_script
+    NO_UNSUPPORTED_PLATFORM_ERROR
+)
+install(SCRIPT ${deploy_script})

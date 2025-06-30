@@ -1,0 +1,9 @@
+C:/Users/gmome/Desktop/Project-edoo/build/CMakeFiles/GUI_BIBLIOTECA.dir
+C:/Users/gmome/Desktop/Project-edoo/build/CMakeFiles/edit_cache.dir
+C:/Users/gmome/Desktop/Project-edoo/build/CMakeFiles/rebuild_cache.dir
+C:/Users/gmome/Desktop/Project-edoo/build/CMakeFiles/list_install_components.dir
+C:/Users/gmome/Desktop/Project-edoo/build/CMakeFiles/install.dir
+C:/Users/gmome/Desktop/Project-edoo/build/CMakeFiles/install/local.dir
+C:/Users/gmome/Desktop/Project-edoo/build/CMakeFiles/install/strip.dir
+C:/Users/gmome/Desktop/Project-edoo/build/CMakeFiles/GUI_BIBLIOTECA_autogen_timestamp_deps.dir
+C:/Users/gmome/Desktop/Project-edoo/build/CMakeFiles/GUI_BIBLIOTECA_autogen.dir
