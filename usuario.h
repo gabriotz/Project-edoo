@@ -24,6 +24,7 @@ public:
 
     std::string getLogin() const;
     std::string getSenha() const;
+    std::vector<Livro*> getVetor()const;
     bool verificarLogin(const std::string& tentativaLogin, const std::string& tentativaSenha) const;
     bool alterarSenha(const std::string& senhaAtual, const std::string& novaSenha);
 

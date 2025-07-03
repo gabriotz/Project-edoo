@@ -19,7 +19,8 @@ public:
     ~MainWindow();
 
     void setCurrentUser(Usuario* user);
-
+signals:
+    void logoutRequest(); // sinal para logout
 private:
     Ui::MainWindow *ui;
     Usuario* m_currentUser;
@@ -29,6 +30,7 @@ private slots:
     void on_loanBookButton_clicked();
     void on_seeBookButton_clicked();
     void on_seeAllBooksButton_clicked();
+    void on_logoutButton_clicked();
 };
 
 #endif // MAINWINDOW_H

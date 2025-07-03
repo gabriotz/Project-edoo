@@ -13,18 +13,17 @@ class seeAllBooksWindow : public QDialog
     Q_OBJECT
 
 public:
-    explicit seeAllBooksWindow(Acervo* acervo, QWidget *parent = nullptr);
+    explicit seeAllBooksWindow(Acervo *acervo, QWidget *parent = nullptr);
     ~seeAllBooksWindow();
 
 private:
     int m_currentIndex;
     Ui::seeAllBooksWindow *ui;
-    Acervo* m_acervo;
+    Acervo *m_acervo;
     void updateBookDisplay();
 private slots:
     void on_nextButton_clicked();
     void on_previousButton_clicked();
-
 };
 
 #endif // SEEALLBOOKSWINDOW_H

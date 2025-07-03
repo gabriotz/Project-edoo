@@ -11,7 +11,7 @@ seeAllBooksWindow::seeAllBooksWindow(Acervo* acervo, QWidget *parent)
     ,m_currentIndex(0)
 {
     ui->setupUi(this);
-   updateBookDisplay();
+    updateBookDisplay();
 }
 
 seeAllBooksWindow::~seeAllBooksWindow()

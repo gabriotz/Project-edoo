@@ -33,6 +33,11 @@ bool Usuario::alterarSenha(const std::string& senhaAtual, const std::string& nov
 void Usuario::pegarLivroEmprestado(Livro* livro){
     livrosEmprestados.push_back(livro);}
 
+std::vector<Livro*> Usuario::getVetor() const{
+    return livrosEmprestados;
+};
+
+
 Livro* Usuario::devolverLivro(const std::string& idLivro) {
     for (auto it = livrosEmprestados.begin(); it != livrosEmprestados.end(); ++it) {
         if ((*it)->getId() == idLivro) {

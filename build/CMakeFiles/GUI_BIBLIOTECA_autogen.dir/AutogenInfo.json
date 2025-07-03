@@ -297,6 +297,12 @@
 			null
 		],
 		[
+			"C:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/loanbookwindow.h",
+			"MU",
+			"EWIEGA46WW/moc_loanbookwindow.cpp",
+			null
+		],
+		[
 			"C:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/loginwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_loginwindow.cpp",
@@ -318,6 +324,12 @@
 			"C:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/seeallbookswindow.h",
 			"MU",
 			"EWIEGA46WW/moc_seeallbookswindow.cpp",
+			null
+		],
+		[
+			"C:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/userbookswindow.h",
+			"MU",
+			"EWIEGA46WW/moc_userbookswindow.cpp",
 			null
 		],
 		[
@@ -433,6 +445,11 @@
 			null
 		],
 		[
+			"C:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/loanbookwindow.cpp",
+			"MU",
+			null
+		],
+		[
 			"C:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/loginwindow.cpp",
 			"MU",
 			null
@@ -454,6 +471,11 @@
 		],
 		[
 			"C:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/seeallbookswindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/userbookswindow.cpp",
 			"MU",
 			null
 		],

@@ -16,15 +16,15 @@ qt_add_executable(GUI_BIBLIOTECA
     main.cpp
     mainwindow.cpp
     mainwindow.ui
-    mainwindow.h  # <--- incorreto
+    mainwindow.h  
     loginwindow.cpp
     loginwindow.ui
-    loginwindow.h   # <--- incorreto
+    loginwindow.h   
     registrationwindow.cpp
     registrationwindow.ui
-    registrationwindow.h # <--- incorreto
+    registrationwindow.h 
     addbookwindow.h addbookwindow.cpp addbookwindow.ui
-    seeallbookswindow.h seeallbookswindow.cpp seeallbookswindow.ui
+    
 
     # Backend
     ../cadastros.cpp
@@ -38,6 +38,12 @@ qt_add_executable(GUI_BIBLIOTECA
     ../acervo.cpp
        
     ../livros.cpp
+    
+    loanbookwindow.h loanbookwindow.cpp loanbookwindow.ui
+    seeallbookswindow.h seeallbookswindow.cpp seeallbookswindow.ui
+    userbookswindow.h userbookswindow.cpp userbookswindow.ui
+
+
     
     
         

@@ -97,14 +97,6 @@ build CMakeFiles/GUI_BIBLIOTECA.dir/addbookwindow.cpp.obj: CXX_COMPILER__GUI_BIB
   OBJECT_DIR = CMakeFiles\GUI_BIBLIOTECA.dir
   OBJECT_FILE_DIR = CMakeFiles\GUI_BIBLIOTECA.dir
 
-build CMakeFiles/GUI_BIBLIOTECA.dir/seeallbookswindow.cpp.obj: CXX_COMPILER__GUI_BIBLIOTECA_unscanned_Debug C$:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/seeallbookswindow.cpp || cmake_object_order_depends_target_GUI_BIBLIOTECA
-  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\GUI_BIBLIOTECA.dir\seeallbookswindow.cpp.obj.d
-  FLAGS = -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g
-  INCLUDES = -IC:/Users/gmome/Desktop/Project-edoo/build/GUI_BIBLIOTECA_autogen/include -isystem C:/Qt/6.9.1/mingw_64/include/QtCore -isystem C:/Qt/6.9.1/mingw_64/include -isystem C:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.1/mingw_64/include/QtGui
-  OBJECT_DIR = CMakeFiles\GUI_BIBLIOTECA.dir
-  OBJECT_FILE_DIR = CMakeFiles\GUI_BIBLIOTECA.dir
-
 build CMakeFiles/GUI_BIBLIOTECA.dir/C_/Users/gmome/Desktop/Project-edoo/cadastros.cpp.obj: CXX_COMPILER__GUI_BIBLIOTECA_unscanned_Debug C$:/Users/gmome/Desktop/Project-edoo/cadastros.cpp || cmake_object_order_depends_target_GUI_BIBLIOTECA
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\GUI_BIBLIOTECA.dir\C_\Users\gmome\Desktop\Project-edoo\cadastros.cpp.obj.d
@@ -153,6 +145,30 @@ build CMakeFiles/GUI_BIBLIOTECA.dir/C_/Users/gmome/Desktop/Project-edoo/livros.c
   OBJECT_DIR = CMakeFiles\GUI_BIBLIOTECA.dir
   OBJECT_FILE_DIR = CMakeFiles\GUI_BIBLIOTECA.dir\C_\Users\gmome\Desktop\Project-edoo
 
+build CMakeFiles/GUI_BIBLIOTECA.dir/loanbookwindow.cpp.obj: CXX_COMPILER__GUI_BIBLIOTECA_unscanned_Debug C$:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/loanbookwindow.cpp || cmake_object_order_depends_target_GUI_BIBLIOTECA
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\GUI_BIBLIOTECA.dir\loanbookwindow.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g
+  INCLUDES = -IC:/Users/gmome/Desktop/Project-edoo/build/GUI_BIBLIOTECA_autogen/include -isystem C:/Qt/6.9.1/mingw_64/include/QtCore -isystem C:/Qt/6.9.1/mingw_64/include -isystem C:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.1/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\GUI_BIBLIOTECA.dir
+  OBJECT_FILE_DIR = CMakeFiles\GUI_BIBLIOTECA.dir
+
+build CMakeFiles/GUI_BIBLIOTECA.dir/seeallbookswindow.cpp.obj: CXX_COMPILER__GUI_BIBLIOTECA_unscanned_Debug C$:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/seeallbookswindow.cpp || cmake_object_order_depends_target_GUI_BIBLIOTECA
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\GUI_BIBLIOTECA.dir\seeallbookswindow.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g
+  INCLUDES = -IC:/Users/gmome/Desktop/Project-edoo/build/GUI_BIBLIOTECA_autogen/include -isystem C:/Qt/6.9.1/mingw_64/include/QtCore -isystem C:/Qt/6.9.1/mingw_64/include -isystem C:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.1/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\GUI_BIBLIOTECA.dir
+  OBJECT_FILE_DIR = CMakeFiles\GUI_BIBLIOTECA.dir
+
+build CMakeFiles/GUI_BIBLIOTECA.dir/userbookswindow.cpp.obj: CXX_COMPILER__GUI_BIBLIOTECA_unscanned_Debug C$:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/userbookswindow.cpp || cmake_object_order_depends_target_GUI_BIBLIOTECA
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\GUI_BIBLIOTECA.dir\userbookswindow.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g
+  INCLUDES = -IC:/Users/gmome/Desktop/Project-edoo/build/GUI_BIBLIOTECA_autogen/include -isystem C:/Qt/6.9.1/mingw_64/include/QtCore -isystem C:/Qt/6.9.1/mingw_64/include -isystem C:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.1/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\GUI_BIBLIOTECA.dir
+  OBJECT_FILE_DIR = CMakeFiles\GUI_BIBLIOTECA.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target GUI_BIBLIOTECA
@@ -161,7 +177,7 @@ build CMakeFiles/GUI_BIBLIOTECA.dir/C_/Users/gmome/Desktop/Project-edoo/livros.c
 #############################################
 # Link the executable GUI_BIBLIOTECA.exe
 
-build GUI_BIBLIOTECA.exe: CXX_EXECUTABLE_LINKER__GUI_BIBLIOTECA_Debug CMakeFiles/GUI_BIBLIOTECA.dir/GUI_BIBLIOTECA_autogen/mocs_compilation.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/main.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/mainwindow.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/loginwindow.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/registrationwindow.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/addbookwindow.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/seeallbookswindow.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/C_/Users/gmome/Desktop/Project-edoo/cadastros.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/C_/Users/gmome/Desktop/Project-edoo/usuario.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/C_/Users/gmome/Desktop/Project-edoo/aluno.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/C_/Users/gmome/Desktop/Project-edoo/professor.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/C_/Users/gmome/Desktop/Project-edoo/acervo.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/C_/Users/gmome/Desktop/Project-edoo/livros.cpp.obj | C$:/Qt/6.9.1/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.9.1/mingw_64/lib/libQt6Gui.a C$:/Qt/6.9.1/mingw_64/lib/libQt6Core.a C$:/Qt/6.9.1/mingw_64/lib/libQt6EntryPoint.a || GUI_BIBLIOTECA_autogen GUI_BIBLIOTECA_autogen_timestamp_deps
+build GUI_BIBLIOTECA.exe: CXX_EXECUTABLE_LINKER__GUI_BIBLIOTECA_Debug CMakeFiles/GUI_BIBLIOTECA.dir/GUI_BIBLIOTECA_autogen/mocs_compilation.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/main.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/mainwindow.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/loginwindow.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/registrationwindow.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/addbookwindow.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/C_/Users/gmome/Desktop/Project-edoo/cadastros.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/C_/Users/gmome/Desktop/Project-edoo/usuario.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/C_/Users/gmome/Desktop/Project-edoo/aluno.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/C_/Users/gmome/Desktop/Project-edoo/professor.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/C_/Users/gmome/Desktop/Project-edoo/acervo.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/C_/Users/gmome/Desktop/Project-edoo/livros.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/loanbookwindow.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/seeallbookswindow.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/userbookswindow.cpp.obj | C$:/Qt/6.9.1/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.9.1/mingw_64/lib/libQt6Gui.a C$:/Qt/6.9.1/mingw_64/lib/libQt6Core.a C$:/Qt/6.9.1/mingw_64/lib/libQt6EntryPoint.a || GUI_BIBLIOTECA_autogen GUI_BIBLIOTECA_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g
   LINK_FLAGS = -mwindows
   LINK_LIBRARIES = C:/Qt/6.9.1/mingw_64/lib/libQt6Widgets.a  C:/Qt/6.9.1/mingw_64/lib/libQt6Gui.a  C:/Qt/6.9.1/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lmingw32  C:/Qt/6.9.1/mingw_64/lib/libQt6EntryPoint.a  -lshell32  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
@@ -248,7 +264,7 @@ build GUI_BIBLIOTECA_autogen_timestamp_deps: phony
 #############################################
 # Utility command for GUI_BIBLIOTECA_autogen
 
-build GUI_BIBLIOTECA_autogen: phony CMakeFiles/GUI_BIBLIOTECA_autogen GUI_BIBLIOTECA_autogen/include/ui_mainwindow.h GUI_BIBLIOTECA_autogen/include/ui_loginwindow.h GUI_BIBLIOTECA_autogen/include/ui_registrationwindow.h GUI_BIBLIOTECA_autogen/include/ui_addbookwindow.h GUI_BIBLIOTECA_autogen/include/ui_seeallbookswindow.h GUI_BIBLIOTECA_autogen/timestamp GUI_BIBLIOTECA_autogen/mocs_compilation.cpp GUI_BIBLIOTECA_autogen_timestamp_deps
+build GUI_BIBLIOTECA_autogen: phony CMakeFiles/GUI_BIBLIOTECA_autogen GUI_BIBLIOTECA_autogen/include/ui_mainwindow.h GUI_BIBLIOTECA_autogen/include/ui_loginwindow.h GUI_BIBLIOTECA_autogen/include/ui_registrationwindow.h GUI_BIBLIOTECA_autogen/include/ui_addbookwindow.h GUI_BIBLIOTECA_autogen/include/ui_loanbookwindow.h GUI_BIBLIOTECA_autogen/include/ui_seeallbookswindow.h GUI_BIBLIOTECA_autogen/include/ui_userbookswindow.h GUI_BIBLIOTECA_autogen/timestamp GUI_BIBLIOTECA_autogen/mocs_compilation.cpp GUI_BIBLIOTECA_autogen_timestamp_deps
 
 
 #############################################
@@ -265,7 +281,7 @@ build GUI_BIBLIOTECA_autogen/timestamp GUI_BIBLIOTECA_autogen/mocs_compilation.c
 #############################################
 # Phony custom command for CMakeFiles\GUI_BIBLIOTECA_autogen
 
-build CMakeFiles/GUI_BIBLIOTECA_autogen GUI_BIBLIOTECA_autogen/include/ui_mainwindow.h GUI_BIBLIOTECA_autogen/include/ui_loginwindow.h GUI_BIBLIOTECA_autogen/include/ui_registrationwindow.h GUI_BIBLIOTECA_autogen/include/ui_addbookwindow.h GUI_BIBLIOTECA_autogen/include/ui_seeallbookswindow.h | ${cmake_ninja_workdir}CMakeFiles/GUI_BIBLIOTECA_autogen ${cmake_ninja_workdir}GUI_BIBLIOTECA_autogen/include/ui_mainwindow.h ${cmake_ninja_workdir}GUI_BIBLIOTECA_autogen/include/ui_loginwindow.h ${cmake_ninja_workdir}GUI_BIBLIOTECA_autogen/include/ui_registrationwindow.h ${cmake_ninja_workdir}GUI_BIBLIOTECA_autogen/include/ui_addbookwindow.h ${cmake_ninja_workdir}GUI_BIBLIOTECA_autogen/include/ui_seeallbookswindow.h: phony GUI_BIBLIOTECA_autogen/timestamp || GUI_BIBLIOTECA_autogen_timestamp_deps
+build CMakeFiles/GUI_BIBLIOTECA_autogen GUI_BIBLIOTECA_autogen/include/ui_mainwindow.h GUI_BIBLIOTECA_autogen/include/ui_loginwindow.h GUI_BIBLIOTECA_autogen/include/ui_registrationwindow.h GUI_BIBLIOTECA_autogen/include/ui_addbookwindow.h GUI_BIBLIOTECA_autogen/include/ui_loanbookwindow.h GUI_BIBLIOTECA_autogen/include/ui_seeallbookswindow.h GUI_BIBLIOTECA_autogen/include/ui_userbookswindow.h | ${cmake_ninja_workdir}CMakeFiles/GUI_BIBLIOTECA_autogen ${cmake_ninja_workdir}GUI_BIBLIOTECA_autogen/include/ui_mainwindow.h ${cmake_ninja_workdir}GUI_BIBLIOTECA_autogen/include/ui_loginwindow.h ${cmake_ninja_workdir}GUI_BIBLIOTECA_autogen/include/ui_registrationwindow.h ${cmake_ninja_workdir}GUI_BIBLIOTECA_autogen/include/ui_addbookwindow.h ${cmake_ninja_workdir}GUI_BIBLIOTECA_autogen/include/ui_loanbookwindow.h ${cmake_ninja_workdir}GUI_BIBLIOTECA_autogen/include/ui_seeallbookswindow.h ${cmake_ninja_workdir}GUI_BIBLIOTECA_autogen/include/ui_userbookswindow.h: phony GUI_BIBLIOTECA_autogen/timestamp || GUI_BIBLIOTECA_autogen_timestamp_deps
 
 # =============================================================================
 # Target aliases.

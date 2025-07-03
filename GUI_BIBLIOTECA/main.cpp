@@ -10,7 +10,7 @@
 #include "../cadastros.h"
 #include "../aluno.h"      // Inclua para poder criar Alunos
 #include "../professor.h"  // Inclua para poder criar Professores
-
+#include "../livros.h"
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
@@ -20,9 +20,13 @@ int main(int argc, char *argv[])
     Cadastros sistemaDeCadastros;
     Acervo biblioteca;
     MainWindow w(&biblioteca);
+    int tamanho = biblioteca.getTamanho();
+    std::string id = "L" + std::to_string(tamanho);
     // --- Popular com dados de teste ---
     sistemaDeCadastros.adicionarUsuario(new Aluno("aluno", "123"));
     sistemaDeCadastros.adicionarUsuario(new Professor("prof", "admin"));
+    biblioteca.adicionarLivro(new Livro(id,"Matematica Discreta","Rosen", "Matemática", 2009, true));
+
     // ---------------------------------------------
 
     // 2. Crie as janelas e passe o sistema de cadastros para elas
@@ -46,6 +50,12 @@ int main(int argc, char *argv[])
     QObject::connect(&login, &LoginWindow::loginSuccessful, [&](Usuario* user) {
         w.setCurrentUser(user); // ...passe o utilizador para a janela principal...
         w.show();               // ...e mostre a janela principal.
+    });
+
+    // Conexão 4: Logout do usuário
+    QObject::connect(&w, &MainWindow::logoutRequest, [&]() {
+        w.close();      // Fecha a janela principal
+        login.show();   // Mostra a janela de login novamente
     });
 
 

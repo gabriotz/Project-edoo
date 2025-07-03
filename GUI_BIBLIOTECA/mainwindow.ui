@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>391</width>
-    <height>333</height>
+    <width>450</width>
+    <height>368</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -79,13 +79,26 @@
      <string>VER LIVROS NA BIBLIOTECA</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="logoutButton">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>270</y>
+      <width>75</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>DESLOGAR</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>391</width>
+     <width>450</width>
      <height>22</height>
     </rect>
    </property>
