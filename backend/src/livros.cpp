@@ -90,6 +90,7 @@ void Livro::verFilaDeEspera() const {
     }
 }
 
+//Verifica se o usuario ja esta na fila de espera de um livro
 bool Livro::estaNaFila(const Usuario* usuario) const {
     for (const Usuario* u : filaDeEspera) {
         if (u->getLogin() == usuario->getLogin()) {

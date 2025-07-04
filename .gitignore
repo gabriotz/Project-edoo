@@ -1,0 +1,20 @@
+# Arquivos e pastas gerados pelo sistema de build (CMake/Qt)
+/build/
+/.cache/
+*.Debug
+*.Release
+
+# Pasta de configuração do VS Code
+/.vscode/
+
+# Arquivos de usuário do Qt Creator
+*.pro.user*
+*.qbs.user*
+CMakeLists.txt.user
+
+# Pasta de distribuição (onde fica o .exe final)
+/MeuSistemaBiblioteca/
+
+# Outros arquivos comuns do sistema operacional
+.DS_Store
+Thumbs.db
