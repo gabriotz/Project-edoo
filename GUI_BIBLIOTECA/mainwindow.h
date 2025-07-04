@@ -4,8 +4,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "../usuario.h"
-#include "../acervo.h"
+#include "usuario.h"
+#include "acervo.h"
 #include "ui_mainwindow.h"
 
 // ...

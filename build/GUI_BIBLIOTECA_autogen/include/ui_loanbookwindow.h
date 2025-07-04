@@ -12,40 +12,102 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_loanBookWindow
 {
 public:
+    QWidget *layoutWidget;
+    QVBoxLayout *verticalLayout;
     QLabel *label;
     QLabel *bookLabel;
-    QPushButton *loanButton;
-    QPushButton *previousButton;
+    QHBoxLayout *horizontalLayout;
     QPushButton *nextButton;
+    QPushButton *previousButton;
+    QPushButton *loanButton;
 
     void setupUi(QDialog *loanBookWindow)
     {
         if (loanBookWindow->objectName().isEmpty())
             loanBookWindow->setObjectName("loanBookWindow");
-        loanBookWindow->resize(340, 385);
-        label = new QLabel(loanBookWindow);
+        loanBookWindow->resize(800, 450);
+        layoutWidget = new QWidget(loanBookWindow);
+        layoutWidget->setObjectName("layoutWidget");
+        layoutWidget->setGeometry(QRect(70, 70, 661, 311));
+        verticalLayout = new QVBoxLayout(layoutWidget);
+        verticalLayout->setObjectName("verticalLayout");
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        label = new QLabel(layoutWidget);
         label->setObjectName("label");
-        label->setGeometry(QRect(100, 60, 121, 31));
-        bookLabel = new QLabel(loanBookWindow);
+
+        verticalLayout->addWidget(label);
+
+        bookLabel = new QLabel(layoutWidget);
         bookLabel->setObjectName("bookLabel");
-        bookLabel->setGeometry(QRect(90, 140, 161, 51));
-        loanButton = new QPushButton(loanBookWindow);
-        loanButton->setObjectName("loanButton");
-        loanButton->setGeometry(QRect(100, 290, 111, 24));
-        previousButton = new QPushButton(loanBookWindow);
-        previousButton->setObjectName("previousButton");
-        previousButton->setGeometry(QRect(10, 230, 75, 24));
-        nextButton = new QPushButton(loanBookWindow);
+        bookLabel->setStyleSheet(QString::fromUtf8("    background-color: #ED1C24; /* Fundo vermelho CIn */\n"
+"    color: white; /* Texto branco */\n"
+"    padding: 5px;\n"
+"    border: 1px solid #8B0000; /* Borda entre as se\303\247\303\265es */\n"
+"    font-family: \"Segoe UI\";\n"
+"    font-weight: bold;\n"
+"    font-size: 10pt;"));
+
+        verticalLayout->addWidget(bookLabel);
+
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName("horizontalLayout");
+        nextButton = new QPushButton(layoutWidget);
         nextButton->setObjectName("nextButton");
-        nextButton->setGeometry(QRect(240, 230, 75, 24));
+        nextButton->setStyleSheet(QString::fromUtf8("background-color: white;\n"
+"color: #ED1C24;\n"
+"border: 2px solid #ED1C24;\n"
+"padding: 8px 16px;\n"
+"font-size: 14px;\n"
+"font-weight: bold;\n"
+"border-radius: 8px;\n"
+"font: 700 12pt \"Segoe UI\";"));
+
+        horizontalLayout->addWidget(nextButton);
+
+        previousButton = new QPushButton(layoutWidget);
+        previousButton->setObjectName("previousButton");
+        previousButton->setStyleSheet(QString::fromUtf8("background-color: white;\n"
+"color: #ED1C24;\n"
+"border: 2px solid #ED1C24;\n"
+"padding: 8px 16px;\n"
+"font-size: 14px;\n"
+"font-weight: bold;\n"
+"border-radius: 8px;\n"
+"font: 700 12pt \"Segoe UI\";"));
+
+        horizontalLayout->addWidget(previousButton);
+
+
+        verticalLayout->addLayout(horizontalLayout);
+
+        loanButton = new QPushButton(layoutWidget);
+        loanButton->setObjectName("loanButton");
+        loanButton->setStyleSheet(QString::fromUtf8("background: qlineargradient(\n"
+"    x1:0, y1:0, x2:1, y2:0,\n"
+"    stop:0 #8B0000, stop:1 #ED1C24\n"
+");\n"
+"color: white;\n"
+"border: none;\n"
+"padding: 12px 20px;\n"
+"font-size: 15px;\n"
+"font-weight: bold;\n"
+"border-radius: 10px;\n"
+"text-align: center;\n"
+""));
+
+        verticalLayout->addWidget(loanButton);
+
 
         retranslateUi(loanBookWindow);
 
@@ -55,11 +117,11 @@ public:
     void retranslateUi(QDialog *loanBookWindow)
     {
         loanBookWindow->setWindowTitle(QCoreApplication::translate("loanBookWindow", "Dialog", nullptr));
-        label->setText(QCoreApplication::translate("loanBookWindow", "Pegar livro Emprestado", nullptr));
+        label->setText(QCoreApplication::translate("loanBookWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:18pt; font-weight:700;\">EMPR\303\211STIMO DE LIVRO</span></p></body></html>", nullptr));
         bookLabel->setText(QCoreApplication::translate("loanBookWindow", "TextLabel", nullptr));
-        loanButton->setText(QCoreApplication::translate("loanBookWindow", "Pegar emprestado", nullptr));
-        previousButton->setText(QCoreApplication::translate("loanBookWindow", "anterior", nullptr));
-        nextButton->setText(QCoreApplication::translate("loanBookWindow", "proximo", nullptr));
+        nextButton->setText(QCoreApplication::translate("loanBookWindow", "PR\303\223XIMO", nullptr));
+        previousButton->setText(QCoreApplication::translate("loanBookWindow", "ANTERIOR", nullptr));
+        loanButton->setText(QCoreApplication::translate("loanBookWindow", "PEGAR EMPRESTADO", nullptr));
     } // retranslateUi
 
 };

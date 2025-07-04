@@ -4,26 +4,28 @@
 #include "addbookwindow.h"
 #include "loanbookwindow.h"
 #include "userbookswindow.h"
-
+// Construtor da janela principal.
 MainWindow::MainWindow(Acervo* acervo, QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow),
     m_currentUser(nullptr),
-    m_acervo(acervo) // <-- O ponteiro é salvo aqui!
+    m_acervo(acervo)
 {
     ui->setupUi(this);
 }
-
+// Destrutor
 MainWindow::~MainWindow()
 {
     delete ui;
 }
+// Chamado quando o usuário clica para doar um livro.
 void MainWindow::on_addBookButton_clicked()
 {
     // Para compilar, a addBookWindow também precisa de ter o construtor correto
     addBookWindow dialog(m_acervo, this);
     dialog.exec();
 }
+// Define o usuário que acabou de fazer login.
 void MainWindow::setCurrentUser(Usuario* user)
 {
     m_currentUser = user; // Salva o ponteiro do utilizador atual
@@ -36,6 +38,7 @@ void MainWindow::setCurrentUser(Usuario* user)
         ui->welcomeLabel->setText("Olá, " + nomeUsuario);
     }
 }
+// Chamado quando o usuário clica para emprestar um livro.
 void MainWindow::on_loanBookButton_clicked()
 {
 
@@ -44,21 +47,22 @@ void MainWindow::on_loanBookButton_clicked()
     dialog.exec();
 }
 
-
+// Chamado quando o usuário clica para ver seus livros.
 void MainWindow::on_seeBookButton_clicked()
 {
     // Cria e exibe a janela de livros do usuário
     userBooksWindow dialog(m_currentUser, m_acervo, this);
     dialog.exec();
 }
+// Chamado quando o usuário clica para ver todos os livros da biblioteca.
 void MainWindow::on_seeAllBooksButton_clicked()
 {
-    seeAllBooksWindow dialog(m_acervo,this);
+    seeAllBooksWindow dialog(m_acervo,this); // Cria a janela que lista todos os livros.
     dialog.exec();
 }
-
+// Chamado quando o usuário clica no botão de deslogar.
 void MainWindow::on_logoutButton_clicked()
 {
-    emit logoutRequest(); // emit sinal de logout
+    emit logoutRequest(); // emite sinal de logout
 }
 

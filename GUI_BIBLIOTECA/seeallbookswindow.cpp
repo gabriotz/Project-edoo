@@ -1,9 +1,9 @@
 #include "seeallbookswindow.h"
 #include "ui_seeallbookswindow.h"
 #include <vector>
-#include "../livros.h"
+#include "livros.h"
 
-
+// Construtor da janela de visualização de todos os livros.
 seeAllBooksWindow::seeAllBooksWindow(Acervo* acervo, QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::seeAllBooksWindow)
@@ -13,14 +13,15 @@ seeAllBooksWindow::seeAllBooksWindow(Acervo* acervo, QWidget *parent)
     ui->setupUi(this);
     updateBookDisplay();
 }
-
+// Destrutor
 seeAllBooksWindow::~seeAllBooksWindow()
 {
     delete ui;
 }
-
+// Atualiza o display com as informações do livro no índice atual.
 void seeAllBooksWindow::updateBookDisplay()
 {
+    // Caso especial: se não houver livros, exibe uma mensagem.
     if (m_acervo == nullptr || m_acervo->getTamanho() == 0) {
         ui->bookLabel->setText("Nenhum livro no acervo.");
 

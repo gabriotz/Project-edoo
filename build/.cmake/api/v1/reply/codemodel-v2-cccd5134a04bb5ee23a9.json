@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-f82700ae4b948bef1f41.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "GUI_BIBLIOTECA",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "GUI_BIBLIOTECA::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GUI_BIBLIOTECA-Release-f172cb7df952ad4165cc.json",
+					"name" : "GUI_BIBLIOTECA",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "GUI_BIBLIOTECA_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GUI_BIBLIOTECA_autogen-Release-bcf4c005b543edf04849.json",
+					"name" : "GUI_BIBLIOTECA_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "GUI_BIBLIOTECA_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GUI_BIBLIOTECA_autogen_timestamp_deps-Release-4ac2c5b0348f81eccbdd.json",
+					"name" : "GUI_BIBLIOTECA_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/gmome/Desktop/Project-edoo/build",
+		"source" : "C:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

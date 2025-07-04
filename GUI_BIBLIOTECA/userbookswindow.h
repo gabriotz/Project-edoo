@@ -3,8 +3,8 @@
 
 
 #include <QDialog>
-#include "../usuario.h"
-#include "../acervo.h"
+#include "usuario.h"
+#include "acervo.h"
 
 
 namespace Ui {

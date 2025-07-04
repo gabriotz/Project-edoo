@@ -2,7 +2,7 @@
 #define LOGINWINDOW_H
 
 #include <QDialog>
-#include "../cadastros.h" // <<< ADICIONE/VERIFIQUE ESTE INCLUDE
+#include "cadastros.h" // <<< ADICIONE/VERIFIQUE ESTE INCLUDE
 
 namespace Ui {
 class LoginWindow;

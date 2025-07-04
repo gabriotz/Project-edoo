@@ -2,8 +2,8 @@
 #define LOANBOOKWINDOW_H
 
 #include <QDialog>
-#include "../usuario.h"
-#include "../acervo.h"
+#include "usuario.h"
+#include "acervo.h"
 
 namespace Ui {
 class loanBookWindow;

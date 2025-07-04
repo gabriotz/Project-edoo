@@ -1,0 +1,67 @@
+COMO RODAR O SISTEMA DA BIBLIOTECA =>
+
+INSTALAR O GIT NO COMPUTADOR
+GIT CLONE https://github.com/gabriotz/Project-edoo.git
+
+
+OPÇÃO 1 (IDEAL)-
+
+
+ABRIR A PASTA EXECUTAVEL
+
+RODAR O ARQUIVO GUI_BIBLIOTECA.EXE
+
+
+OPÇÃO 2(RODAR PELO VSCODE)-
+
+
+Passo 0: Pré-requisitos ()
+Antes de tudo, verifique se você tem as extensões essenciais no VS Code. Vá para a aba de Extensões (ícone de blocos no menu lateral):
+
+Instale a extensão C/C++ da Microsoft.
+
+Instale a extensão CMake Tools da Microsoft.
+
+Instale a extensão Qt Tools da The Qt Company.
+
+Instale o qt creator
+
+Passo 1: Configurar o "Kit" (O Passo Mais Importante)
+É aqui que você diz ao VS Code qual compilador e qual instalação do Qt usar, resolvendo o erro "Could not find a package...".
+
+Com seu projeto aberto no VS Code, abra a Paleta de Comandos pressionando Ctrl+Shift+P.
+
+Digite CMake: Select a Kit e pressione Enter.
+
+O VS Code irá mostrar uma lista de compiladores que ele encontrou. Escolha a opção que corresponde à sua instalação do Qt, que será algo como "Qt 6.9.1 MinGW 64-bit".
+
+Se a opção não aparecer, rode CMake: Scan for Kits na Paleta de Comandos e tente novamente.
+
+Depois de selecionar o Kit, o VS Code pode pedir para reconfigurar o projeto. Confirme. Se não pedir, faça manualmente no próximo passo.
+
+Passo 2: Limpar e Reconfigurar o Projeto
+Para garantir que o VS Code use as novas configurações do Kit, você precisa limpar o cache antigo.
+
+Abra a Paleta de Comandos (Ctrl+Shift+P).
+
+Digite e execute CMake: Delete Cache and Reconfigure.
+
+O VS Code vai apagar a pasta build e recriá-la usando o Kit do Qt que você selecionou. Observe o painel "Output" na parte inferior; você não deverá mais ver o erro sobre não encontrar o Qt6.
+
+Passo 3: Compilar o Projeto
+Com a configuração correta, compilar é muito fácil.
+
+Na barra de status azul na parte inferior da janela do VS Code, você verá um botão Build.
+
+Clique nele. Alternativamente, pressione F7.
+
+O VS Code executará o comando cmake --build ./build e você verá o progresso da compilação no painel "Output".
+
+Passo 4: Executar e Depurar o Projeto
+Selecione o Alvo de Execução: Na barra de status, ao lado do botão de "Build", você verá o nome do seu projeto (▶️ GUI_BIBLIOTECA). Se houver mais de um, certifique-se de que este esteja selecionado.
+
+Execute o Programa:
+
+Para rodar sem depuração: Clique no ícone de play (▶️) na barra de status.
+
+Para rodar com depuração: Pressione a tecla F5 ou clique no ícone de play com um inseto (🐞) na barra de status.

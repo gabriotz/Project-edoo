@@ -6,67 +6,104 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>800</width>
+    <height>450</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QLabel" name="label">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>20</y>
-     <width>101</width>
-     <height>20</height>
+     <x>110</x>
+     <y>70</y>
+     <width>621</width>
+     <height>311</height>
     </rect>
    </property>
-   <property name="text">
-    <string>Livros na Biblioteca</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="bookLabel">
-   <property name="geometry">
-    <rect>
-     <x>90</x>
-     <y>60</y>
-     <width>201</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>TextLabel</string>
-   </property>
-   <property name="wordWrap">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="previousButton">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>140</y>
-     <width>75</width>
-     <height>24</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Anterior</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="nextButton">
-   <property name="geometry">
-    <rect>
-     <x>270</x>
-     <y>140</y>
-     <width>75</width>
-     <height>24</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Proximo</string>
-   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:700; color:#2d2d2d;&quot;&gt;LIVROS DA BIBLIOTECA&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="bookLabel">
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #ED1C24; /* Fundo vermelho CIn */
+    color: white; /* Texto branco */
+    padding: 5px;
+    border: 1px solid #8B0000; /* Borda entre as seções */
+    font-family: &quot;Segoe UI&quot;;
+    font-weight: bold;
+    font-size: 10pt;
+
+QTableView { /* Estilo da tabela */
+    background-color: white;
+    gridline-color: #F0F0F0; /* Cor da grade */
+    selection-background-color: #FFE5E5; /* Cor da seleção (levemente rosado) */
+    selection-color: #2D2D2D; /* Cor do texto selecionado */
+    border: 1px solid #CCCCCC;
+    border-radius: 8px;
+}
+QTableView::item { /* Estilo de cada item/célula */
+    padding: 5px;
+    font-family: &quot;Segoe UI&quot;;
+    font-size: 9pt;
+    color: #2D2D2D;
+}
+QTableView::item:alternate { /* Linhas alternadas */
+    background-color: #F8F8F8;
+}</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;TextLabel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="nextButton">
+      <property name="styleSheet">
+       <string notr="true">background-color: white;
+color: #ED1C24;
+border: 2px solid #ED1C24;
+padding: 8px 16px;
+font-size: 14px;
+font-weight: bold;
+border-radius: 8px;</string>
+      </property>
+      <property name="text">
+       <string>PRÓXIMO</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="previousButton">
+      <property name="styleSheet">
+       <string notr="true">background-color: white;
+color: #ED1C24;
+border: 2px solid #ED1C24;
+padding: 8px 16px;
+font-size: 14px;
+font-weight: bold;
+border-radius: 8px;</string>
+      </property>
+      <property name="text">
+       <string>ANTERIOR</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>

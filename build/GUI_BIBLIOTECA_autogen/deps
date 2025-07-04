@@ -606,22 +606,20 @@ GUI_BIBLIOTECA_autogen/timestamp: \
 	C:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/seeallbookswindow.h \
 	C:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/userbookswindow.cpp \
 	C:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/userbookswindow.h \
-	C:/Users/gmome/Desktop/Project-edoo/acervo.cpp \
-	C:/Users/gmome/Desktop/Project-edoo/acervo.h \
-	C:/Users/gmome/Desktop/Project-edoo/aluno.cpp \
-	C:/Users/gmome/Desktop/Project-edoo/aluno.h \
+	C:/Users/gmome/Desktop/Project-edoo/backend/headers/acervo.h \
+	C:/Users/gmome/Desktop/Project-edoo/backend/headers/cadastros.h \
+	C:/Users/gmome/Desktop/Project-edoo/backend/headers/livros.h \
+	C:/Users/gmome/Desktop/Project-edoo/backend/headers/usuario.h \
+	C:/Users/gmome/Desktop/Project-edoo/backend/src/acervo.cpp \
+	C:/Users/gmome/Desktop/Project-edoo/backend/src/aluno.cpp \
+	C:/Users/gmome/Desktop/Project-edoo/backend/src/cadastros.cpp \
+	C:/Users/gmome/Desktop/Project-edoo/backend/src/livros.cpp \
+	C:/Users/gmome/Desktop/Project-edoo/backend/src/professor.cpp \
+	C:/Users/gmome/Desktop/Project-edoo/backend/src/usuario.cpp \
 	C:/Users/gmome/Desktop/Project-edoo/build/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake \
 	C:/Users/gmome/Desktop/Project-edoo/build/CMakeFiles/3.30.5/CMakeRCCompiler.cmake \
 	C:/Users/gmome/Desktop/Project-edoo/build/CMakeFiles/3.30.5/CMakeSystem.cmake \
 	C:/Users/gmome/Desktop/Project-edoo/build/GUI_BIBLIOTECA_autogen/moc_predefs.h \
-	C:/Users/gmome/Desktop/Project-edoo/cadastros.cpp \
-	C:/Users/gmome/Desktop/Project-edoo/cadastros.h \
-	C:/Users/gmome/Desktop/Project-edoo/livros.cpp \
-	C:/Users/gmome/Desktop/Project-edoo/livros.h \
-	C:/Users/gmome/Desktop/Project-edoo/professor.cpp \
-	C:/Users/gmome/Desktop/Project-edoo/professor.h \
-	C:/Users/gmome/Desktop/Project-edoo/usuario.cpp \
-	C:/Users/gmome/Desktop/Project-edoo/usuario.h \
 	C:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/addbookwindow.ui \
 	C:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/loanbookwindow.ui \
 	C:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/loginwindow.ui \

@@ -27,17 +27,13 @@ qt_add_executable(GUI_BIBLIOTECA
     
 
     # Backend
-    ../cadastros.cpp
-      
-    ../usuario.cpp
-       
-    ../aluno.cpp
-         
-    ../professor.cpp
-     
-    ../acervo.cpp
-       
-    ../livros.cpp
+    # Backend
+    ../backend/src/cadastros.cpp
+    ../backend/src/usuario.cpp
+    ../backend/src/aluno.cpp
+    ../backend/src/professor.cpp
+    ../backend/src/acervo.cpp
+    ../backend/src/livros.cpp
     
     loanbookwindow.h loanbookwindow.cpp loanbookwindow.ui
     seeallbookswindow.h seeallbookswindow.cpp seeallbookswindow.ui
@@ -48,6 +44,7 @@ qt_add_executable(GUI_BIBLIOTECA
     
         
 )
+target_include_directories(GUI_BIBLIOTECA PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/../backend/headers")
 target_link_libraries(GUI_BIBLIOTECA
     PRIVATE
         Qt::Core

@@ -16,12 +16,16 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_RegistrationWindow
 {
 public:
+    QWidget *layoutWidget;
+    QVBoxLayout *verticalLayout;
     QLabel *label;
     QLabel *label_2;
     QLineEdit *loginLineEdit;
@@ -35,33 +39,103 @@ public:
     {
         if (RegistrationWindow->objectName().isEmpty())
             RegistrationWindow->setObjectName("RegistrationWindow");
-        RegistrationWindow->resize(400, 300);
-        label = new QLabel(RegistrationWindow);
+        RegistrationWindow->resize(800, 450);
+        RegistrationWindow->setMinimumSize(QSize(600, 450));
+        RegistrationWindow->setMaximumSize(QSize(1200, 900));
+        layoutWidget = new QWidget(RegistrationWindow);
+        layoutWidget->setObjectName("layoutWidget");
+        layoutWidget->setGeometry(QRect(70, 70, 661, 311));
+        verticalLayout = new QVBoxLayout(layoutWidget);
+        verticalLayout->setObjectName("verticalLayout");
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        label = new QLabel(layoutWidget);
         label->setObjectName("label");
-        label->setGeometry(QRect(160, 20, 71, 16));
-        label_2 = new QLabel(RegistrationWindow);
+
+        verticalLayout->addWidget(label);
+
+        label_2 = new QLabel(layoutWidget);
         label_2->setObjectName("label_2");
-        label_2->setGeometry(QRect(170, 50, 71, 16));
-        loginLineEdit = new QLineEdit(RegistrationWindow);
+
+        verticalLayout->addWidget(label_2);
+
+        loginLineEdit = new QLineEdit(layoutWidget);
         loginLineEdit->setObjectName("loginLineEdit");
-        loginLineEdit->setGeometry(QRect(140, 70, 113, 22));
-        label_3 = new QLabel(RegistrationWindow);
+        loginLineEdit->setStyleSheet(QString::fromUtf8("background-color: white;\n"
+"border: 1px solid #CCCCCC;\n"
+"padding: 8px;\n"
+"border-radius: 8px;\n"
+"color: #2D2D2D;\n"
+"outline: none; /* Remove a borda de foco padr\303\243o do SO */"));
+
+        verticalLayout->addWidget(loginLineEdit);
+
+        label_3 = new QLabel(layoutWidget);
         label_3->setObjectName("label_3");
-        label_3->setGeometry(QRect(180, 110, 71, 16));
-        passwordLineEdit = new QLineEdit(RegistrationWindow);
+
+        verticalLayout->addWidget(label_3);
+
+        passwordLineEdit = new QLineEdit(layoutWidget);
         passwordLineEdit->setObjectName("passwordLineEdit");
-        passwordLineEdit->setGeometry(QRect(140, 130, 113, 22));
-        accountTypeComboBox = new QComboBox(RegistrationWindow);
+        passwordLineEdit->setStyleSheet(QString::fromUtf8("background-color: white;\n"
+"border: 1px solid #CCCCCC;\n"
+"padding: 8px;\n"
+"border-radius: 8px;\n"
+"color: #2D2D2D;\n"
+"outline: none; /* Remove a borda de foco padr\303\243o do SO */"));
+
+        verticalLayout->addWidget(passwordLineEdit);
+
+        accountTypeComboBox = new QComboBox(layoutWidget);
         accountTypeComboBox->addItem(QString());
         accountTypeComboBox->addItem(QString());
         accountTypeComboBox->setObjectName("accountTypeComboBox");
-        accountTypeComboBox->setGeometry(QRect(160, 170, 101, 22));
-        registerButton = new QPushButton(RegistrationWindow);
+        accountTypeComboBox->setStyleSheet(QString::fromUtf8("background-color: white;\n"
+"border: 1px solid #CCCCCC;\n"
+"padding: 8px;\n"
+"border-radius: 8px;\n"
+"color: #2D2D2D;\n"
+"outline: none;\n"
+"\n"
+"/* Opcional: estilo da seta para baixo */\n"
+"QComboBox::drop-down {\n"
+"    border-left: 1px solid #CCCCCC;\n"
+"    width: 20px; /* Largura da \303\241rea da seta */\n"
+"}\n"
+"QComboBox::down-arrow {\n"
+"    image: url(Caminho/Para/Sua/Seta.png); /* Se quiser um \303\255cone personalizado */\n"
+"}"));
+
+        verticalLayout->addWidget(accountTypeComboBox);
+
+        registerButton = new QPushButton(layoutWidget);
         registerButton->setObjectName("registerButton");
-        registerButton->setGeometry(QRect(274, 210, 81, 24));
-        loginButton = new QPushButton(RegistrationWindow);
+        registerButton->setStyleSheet(QString::fromUtf8("background: qlineargradient(\n"
+"    x1:0, y1:0, x2:1, y2:0,\n"
+"    stop:0 #8B0000, stop:1 #ED1C24\n"
+");\n"
+"color: white;\n"
+"border: none;\n"
+"padding: 12px 20px;\n"
+"font-size: 15px;\n"
+"font-weight: bold;\n"
+"border-radius: 10px;\n"
+"text-align: center;\n"
+""));
+
+        verticalLayout->addWidget(registerButton);
+
+        loginButton = new QPushButton(layoutWidget);
         loginButton->setObjectName("loginButton");
-        loginButton->setGeometry(QRect(50, 210, 111, 24));
+        loginButton->setStyleSheet(QString::fromUtf8("background-color: white;\n"
+"color: #ED1C24;\n"
+"border: 2px solid #ED1C24;\n"
+"padding: 8px 16px;\n"
+"font-size: 14px;\n"
+"font-weight: bold;\n"
+"border-radius: 8px;"));
+
+        verticalLayout->addWidget(loginButton);
+
 
         retranslateUi(RegistrationWindow);
 
@@ -71,9 +145,9 @@ public:
     void retranslateUi(QDialog *RegistrationWindow)
     {
         RegistrationWindow->setWindowTitle(QCoreApplication::translate("RegistrationWindow", "Dialog", nullptr));
-        label->setText(QCoreApplication::translate("RegistrationWindow", "CADASTRO", nullptr));
-        label_2->setText(QCoreApplication::translate("RegistrationWindow", "USUARIO", nullptr));
-        label_3->setText(QCoreApplication::translate("RegistrationWindow", "SENHA", nullptr));
+        label->setText(QCoreApplication::translate("RegistrationWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:18pt; font-weight:700;\">CADASTRO</span></p></body></html>", nullptr));
+        label_2->setText(QCoreApplication::translate("RegistrationWindow", "<html><head/><body><p><span style=\" font-weight:700; color:#2d2d2d;\">USUARIO</span></p></body></html>", nullptr));
+        label_3->setText(QCoreApplication::translate("RegistrationWindow", "<html><head/><body><p><span style=\" font-weight:700; color:#2d2d2d;\">SENHA</span></p></body></html>", nullptr));
         accountTypeComboBox->setItemText(0, QCoreApplication::translate("RegistrationWindow", "PROFESSOR", nullptr));
         accountTypeComboBox->setItemText(1, QCoreApplication::translate("RegistrationWindow", "ALUNO", nullptr));
 

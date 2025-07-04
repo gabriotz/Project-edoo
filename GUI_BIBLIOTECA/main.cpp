@@ -7,10 +7,10 @@
 #include <QObject>
 
 // Inclua o cabeçalho principal do seu backend
-#include "../cadastros.h"
-#include "../aluno.h"      // Inclua para poder criar Alunos
-#include "../professor.h"  // Inclua para poder criar Professores
-#include "../livros.h"
+#include "cadastros.h"
+#include "aluno.h"      // Inclua para poder criar Alunos
+#include "professor.h"  // Inclua para poder criar Professores
+#include "livros.h"
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
@@ -26,6 +26,10 @@ int main(int argc, char *argv[])
     sistemaDeCadastros.adicionarUsuario(new Aluno("aluno", "123"));
     sistemaDeCadastros.adicionarUsuario(new Professor("prof", "admin"));
     biblioteca.adicionarLivro(new Livro(id,"Matematica Discreta","Rosen", "Matemática", 2009, true));
+    tamanho = biblioteca.getTamanho();
+    id = "L" + std::to_string(tamanho);
+
+    biblioteca.adicionarLivro(new Livro(id,"Memorias póstumas de Brás Cubas","Machado de Assis", "Literatura", 1881, true));
 
     // ---------------------------------------------
 

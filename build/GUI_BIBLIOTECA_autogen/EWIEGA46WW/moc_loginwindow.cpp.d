@@ -383,7 +383,7 @@ C:/Users/gmome/Desktop/Project-edoo/build/GUI_BIBLIOTECA_autogen/EWIEGA46WW/moc_
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wctype.h \
-  C:/Users/gmome/Desktop/Project-edoo/acervo.h \
-  C:/Users/gmome/Desktop/Project-edoo/cadastros.h \
-  C:/Users/gmome/Desktop/Project-edoo/livros.h \
-  C:/Users/gmome/Desktop/Project-edoo/usuario.h
+  C:/Users/gmome/Desktop/Project-edoo/backend/headers/acervo.h \
+  C:/Users/gmome/Desktop/Project-edoo/backend/headers/cadastros.h \
+  C:/Users/gmome/Desktop/Project-edoo/backend/headers/livros.h \
+  C:/Users/gmome/Desktop/Project-edoo/backend/headers/usuario.h

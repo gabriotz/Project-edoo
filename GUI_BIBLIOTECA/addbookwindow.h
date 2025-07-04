@@ -2,8 +2,8 @@
 #define ADDBOOKWINDOW_H
 
 #include <QDialog>
-#include "../acervo.h" // Inclua o acervo
-#include "../livros.h"
+#include "acervo.h" // Inclua o acervo
+#include "livros.h"
 
 namespace Ui {
 class addBookWindow;

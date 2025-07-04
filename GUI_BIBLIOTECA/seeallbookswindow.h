@@ -2,7 +2,7 @@
 #define SEEALLBOOKSWINDOW_H
 
 #include <QDialog>
-#include "../acervo.h"
+#include "acervo.h"
 
 namespace Ui {
 class seeAllBooksWindow;

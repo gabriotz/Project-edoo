@@ -1,7 +1,7 @@
 #include "registrationwindow.h"
 #include "ui_registrationwindow.h"
-#include "../aluno.h"
-#include "../professor.h"
+#include "aluno.h"
+#include "professor.h"
 #include <QMessageBox> // Para mostrar mensagens de erro/sucesso
 
 // Modifique o construtor para receber e guardar o ponteiro

@@ -12,7 +12,7 @@
 
 # =============================================================================
 # Project: GUI_BIBLIOTECA
-# Configurations: Debug
+# Configurations: Release
 # =============================================================================
 
 #############################################
@@ -24,7 +24,7 @@ ninja_required_version = 1.5
 #############################################
 # Set configuration variable for custom commands.
 
-CONFIGURATION = Debug
+CONFIGURATION = Release
 # =============================================================================
 # Include auxiliary files.
 
@@ -49,123 +49,123 @@ cmake_ninja_workdir = C$:/Users/gmome/Desktop/Project-edoo/build/
 
 build cmake_object_order_depends_target_GUI_BIBLIOTECA: phony || GUI_BIBLIOTECA_autogen GUI_BIBLIOTECA_autogen/mocs_compilation.cpp GUI_BIBLIOTECA_autogen/timestamp GUI_BIBLIOTECA_autogen_timestamp_deps
 
-build CMakeFiles/GUI_BIBLIOTECA.dir/GUI_BIBLIOTECA_autogen/mocs_compilation.cpp.obj: CXX_COMPILER__GUI_BIBLIOTECA_unscanned_Debug C$:/Users/gmome/Desktop/Project-edoo/build/GUI_BIBLIOTECA_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_GUI_BIBLIOTECA
-  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+build CMakeFiles/GUI_BIBLIOTECA.dir/GUI_BIBLIOTECA_autogen/mocs_compilation.cpp.obj: CXX_COMPILER__GUI_BIBLIOTECA_unscanned_Release C$:/Users/gmome/Desktop/Project-edoo/build/GUI_BIBLIOTECA_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_GUI_BIBLIOTECA
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\GUI_BIBLIOTECA.dir\GUI_BIBLIOTECA_autogen\mocs_compilation.cpp.obj.d
-  FLAGS = -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g
-  INCLUDES = -IC:/Users/gmome/Desktop/Project-edoo/build/GUI_BIBLIOTECA_autogen/include -isystem C:/Qt/6.9.1/mingw_64/include/QtCore -isystem C:/Qt/6.9.1/mingw_64/include -isystem C:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.1/mingw_64/include/QtGui
+  FLAGS = -O3 -DNDEBUG
+  INCLUDES = -IC:/Users/gmome/Desktop/Project-edoo/build/GUI_BIBLIOTECA_autogen/include -IC:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/../backend/headers -isystem C:/Qt/6.9.1/mingw_64/include/QtCore -isystem C:/Qt/6.9.1/mingw_64/include -isystem C:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.1/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\GUI_BIBLIOTECA.dir
   OBJECT_FILE_DIR = CMakeFiles\GUI_BIBLIOTECA.dir\GUI_BIBLIOTECA_autogen
 
-build CMakeFiles/GUI_BIBLIOTECA.dir/main.cpp.obj: CXX_COMPILER__GUI_BIBLIOTECA_unscanned_Debug C$:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/main.cpp || cmake_object_order_depends_target_GUI_BIBLIOTECA
-  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+build CMakeFiles/GUI_BIBLIOTECA.dir/main.cpp.obj: CXX_COMPILER__GUI_BIBLIOTECA_unscanned_Release C$:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/main.cpp || cmake_object_order_depends_target_GUI_BIBLIOTECA
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\GUI_BIBLIOTECA.dir\main.cpp.obj.d
-  FLAGS = -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g
-  INCLUDES = -IC:/Users/gmome/Desktop/Project-edoo/build/GUI_BIBLIOTECA_autogen/include -isystem C:/Qt/6.9.1/mingw_64/include/QtCore -isystem C:/Qt/6.9.1/mingw_64/include -isystem C:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.1/mingw_64/include/QtGui
+  FLAGS = -O3 -DNDEBUG
+  INCLUDES = -IC:/Users/gmome/Desktop/Project-edoo/build/GUI_BIBLIOTECA_autogen/include -IC:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/../backend/headers -isystem C:/Qt/6.9.1/mingw_64/include/QtCore -isystem C:/Qt/6.9.1/mingw_64/include -isystem C:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.1/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\GUI_BIBLIOTECA.dir
   OBJECT_FILE_DIR = CMakeFiles\GUI_BIBLIOTECA.dir
 
-build CMakeFiles/GUI_BIBLIOTECA.dir/mainwindow.cpp.obj: CXX_COMPILER__GUI_BIBLIOTECA_unscanned_Debug C$:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/mainwindow.cpp || cmake_object_order_depends_target_GUI_BIBLIOTECA
-  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+build CMakeFiles/GUI_BIBLIOTECA.dir/mainwindow.cpp.obj: CXX_COMPILER__GUI_BIBLIOTECA_unscanned_Release C$:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/mainwindow.cpp || cmake_object_order_depends_target_GUI_BIBLIOTECA
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\GUI_BIBLIOTECA.dir\mainwindow.cpp.obj.d
-  FLAGS = -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g
-  INCLUDES = -IC:/Users/gmome/Desktop/Project-edoo/build/GUI_BIBLIOTECA_autogen/include -isystem C:/Qt/6.9.1/mingw_64/include/QtCore -isystem C:/Qt/6.9.1/mingw_64/include -isystem C:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.1/mingw_64/include/QtGui
+  FLAGS = -O3 -DNDEBUG
+  INCLUDES = -IC:/Users/gmome/Desktop/Project-edoo/build/GUI_BIBLIOTECA_autogen/include -IC:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/../backend/headers -isystem C:/Qt/6.9.1/mingw_64/include/QtCore -isystem C:/Qt/6.9.1/mingw_64/include -isystem C:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.1/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\GUI_BIBLIOTECA.dir
   OBJECT_FILE_DIR = CMakeFiles\GUI_BIBLIOTECA.dir
 
-build CMakeFiles/GUI_BIBLIOTECA.dir/loginwindow.cpp.obj: CXX_COMPILER__GUI_BIBLIOTECA_unscanned_Debug C$:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/loginwindow.cpp || cmake_object_order_depends_target_GUI_BIBLIOTECA
-  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+build CMakeFiles/GUI_BIBLIOTECA.dir/loginwindow.cpp.obj: CXX_COMPILER__GUI_BIBLIOTECA_unscanned_Release C$:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/loginwindow.cpp || cmake_object_order_depends_target_GUI_BIBLIOTECA
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\GUI_BIBLIOTECA.dir\loginwindow.cpp.obj.d
-  FLAGS = -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g
-  INCLUDES = -IC:/Users/gmome/Desktop/Project-edoo/build/GUI_BIBLIOTECA_autogen/include -isystem C:/Qt/6.9.1/mingw_64/include/QtCore -isystem C:/Qt/6.9.1/mingw_64/include -isystem C:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.1/mingw_64/include/QtGui
+  FLAGS = -O3 -DNDEBUG
+  INCLUDES = -IC:/Users/gmome/Desktop/Project-edoo/build/GUI_BIBLIOTECA_autogen/include -IC:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/../backend/headers -isystem C:/Qt/6.9.1/mingw_64/include/QtCore -isystem C:/Qt/6.9.1/mingw_64/include -isystem C:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.1/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\GUI_BIBLIOTECA.dir
   OBJECT_FILE_DIR = CMakeFiles\GUI_BIBLIOTECA.dir
 
-build CMakeFiles/GUI_BIBLIOTECA.dir/registrationwindow.cpp.obj: CXX_COMPILER__GUI_BIBLIOTECA_unscanned_Debug C$:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/registrationwindow.cpp || cmake_object_order_depends_target_GUI_BIBLIOTECA
-  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+build CMakeFiles/GUI_BIBLIOTECA.dir/registrationwindow.cpp.obj: CXX_COMPILER__GUI_BIBLIOTECA_unscanned_Release C$:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/registrationwindow.cpp || cmake_object_order_depends_target_GUI_BIBLIOTECA
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\GUI_BIBLIOTECA.dir\registrationwindow.cpp.obj.d
-  FLAGS = -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g
-  INCLUDES = -IC:/Users/gmome/Desktop/Project-edoo/build/GUI_BIBLIOTECA_autogen/include -isystem C:/Qt/6.9.1/mingw_64/include/QtCore -isystem C:/Qt/6.9.1/mingw_64/include -isystem C:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.1/mingw_64/include/QtGui
+  FLAGS = -O3 -DNDEBUG
+  INCLUDES = -IC:/Users/gmome/Desktop/Project-edoo/build/GUI_BIBLIOTECA_autogen/include -IC:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/../backend/headers -isystem C:/Qt/6.9.1/mingw_64/include/QtCore -isystem C:/Qt/6.9.1/mingw_64/include -isystem C:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.1/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\GUI_BIBLIOTECA.dir
   OBJECT_FILE_DIR = CMakeFiles\GUI_BIBLIOTECA.dir
 
-build CMakeFiles/GUI_BIBLIOTECA.dir/addbookwindow.cpp.obj: CXX_COMPILER__GUI_BIBLIOTECA_unscanned_Debug C$:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/addbookwindow.cpp || cmake_object_order_depends_target_GUI_BIBLIOTECA
-  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+build CMakeFiles/GUI_BIBLIOTECA.dir/addbookwindow.cpp.obj: CXX_COMPILER__GUI_BIBLIOTECA_unscanned_Release C$:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/addbookwindow.cpp || cmake_object_order_depends_target_GUI_BIBLIOTECA
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\GUI_BIBLIOTECA.dir\addbookwindow.cpp.obj.d
-  FLAGS = -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g
-  INCLUDES = -IC:/Users/gmome/Desktop/Project-edoo/build/GUI_BIBLIOTECA_autogen/include -isystem C:/Qt/6.9.1/mingw_64/include/QtCore -isystem C:/Qt/6.9.1/mingw_64/include -isystem C:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.1/mingw_64/include/QtGui
+  FLAGS = -O3 -DNDEBUG
+  INCLUDES = -IC:/Users/gmome/Desktop/Project-edoo/build/GUI_BIBLIOTECA_autogen/include -IC:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/../backend/headers -isystem C:/Qt/6.9.1/mingw_64/include/QtCore -isystem C:/Qt/6.9.1/mingw_64/include -isystem C:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.1/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\GUI_BIBLIOTECA.dir
   OBJECT_FILE_DIR = CMakeFiles\GUI_BIBLIOTECA.dir
 
-build CMakeFiles/GUI_BIBLIOTECA.dir/C_/Users/gmome/Desktop/Project-edoo/cadastros.cpp.obj: CXX_COMPILER__GUI_BIBLIOTECA_unscanned_Debug C$:/Users/gmome/Desktop/Project-edoo/cadastros.cpp || cmake_object_order_depends_target_GUI_BIBLIOTECA
-  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\GUI_BIBLIOTECA.dir\C_\Users\gmome\Desktop\Project-edoo\cadastros.cpp.obj.d
-  FLAGS = -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g
-  INCLUDES = -IC:/Users/gmome/Desktop/Project-edoo/build/GUI_BIBLIOTECA_autogen/include -isystem C:/Qt/6.9.1/mingw_64/include/QtCore -isystem C:/Qt/6.9.1/mingw_64/include -isystem C:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.1/mingw_64/include/QtGui
+build CMakeFiles/GUI_BIBLIOTECA.dir/C_/Users/gmome/Desktop/Project-edoo/backend/src/cadastros.cpp.obj: CXX_COMPILER__GUI_BIBLIOTECA_unscanned_Release C$:/Users/gmome/Desktop/Project-edoo/backend/src/cadastros.cpp || cmake_object_order_depends_target_GUI_BIBLIOTECA
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\GUI_BIBLIOTECA.dir\C_\Users\gmome\Desktop\Project-edoo\backend\src\cadastros.cpp.obj.d
+  FLAGS = -O3 -DNDEBUG
+  INCLUDES = -IC:/Users/gmome/Desktop/Project-edoo/build/GUI_BIBLIOTECA_autogen/include -IC:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/../backend/headers -isystem C:/Qt/6.9.1/mingw_64/include/QtCore -isystem C:/Qt/6.9.1/mingw_64/include -isystem C:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.1/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\GUI_BIBLIOTECA.dir
-  OBJECT_FILE_DIR = CMakeFiles\GUI_BIBLIOTECA.dir\C_\Users\gmome\Desktop\Project-edoo
+  OBJECT_FILE_DIR = CMakeFiles\GUI_BIBLIOTECA.dir\C_\Users\gmome\Desktop\Project-edoo\backend\src
 
-build CMakeFiles/GUI_BIBLIOTECA.dir/C_/Users/gmome/Desktop/Project-edoo/usuario.cpp.obj: CXX_COMPILER__GUI_BIBLIOTECA_unscanned_Debug C$:/Users/gmome/Desktop/Project-edoo/usuario.cpp || cmake_object_order_depends_target_GUI_BIBLIOTECA
-  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\GUI_BIBLIOTECA.dir\C_\Users\gmome\Desktop\Project-edoo\usuario.cpp.obj.d
-  FLAGS = -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g
-  INCLUDES = -IC:/Users/gmome/Desktop/Project-edoo/build/GUI_BIBLIOTECA_autogen/include -isystem C:/Qt/6.9.1/mingw_64/include/QtCore -isystem C:/Qt/6.9.1/mingw_64/include -isystem C:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.1/mingw_64/include/QtGui
+build CMakeFiles/GUI_BIBLIOTECA.dir/C_/Users/gmome/Desktop/Project-edoo/backend/src/usuario.cpp.obj: CXX_COMPILER__GUI_BIBLIOTECA_unscanned_Release C$:/Users/gmome/Desktop/Project-edoo/backend/src/usuario.cpp || cmake_object_order_depends_target_GUI_BIBLIOTECA
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\GUI_BIBLIOTECA.dir\C_\Users\gmome\Desktop\Project-edoo\backend\src\usuario.cpp.obj.d
+  FLAGS = -O3 -DNDEBUG
+  INCLUDES = -IC:/Users/gmome/Desktop/Project-edoo/build/GUI_BIBLIOTECA_autogen/include -IC:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/../backend/headers -isystem C:/Qt/6.9.1/mingw_64/include/QtCore -isystem C:/Qt/6.9.1/mingw_64/include -isystem C:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.1/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\GUI_BIBLIOTECA.dir
-  OBJECT_FILE_DIR = CMakeFiles\GUI_BIBLIOTECA.dir\C_\Users\gmome\Desktop\Project-edoo
+  OBJECT_FILE_DIR = CMakeFiles\GUI_BIBLIOTECA.dir\C_\Users\gmome\Desktop\Project-edoo\backend\src
 
-build CMakeFiles/GUI_BIBLIOTECA.dir/C_/Users/gmome/Desktop/Project-edoo/aluno.cpp.obj: CXX_COMPILER__GUI_BIBLIOTECA_unscanned_Debug C$:/Users/gmome/Desktop/Project-edoo/aluno.cpp || cmake_object_order_depends_target_GUI_BIBLIOTECA
-  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\GUI_BIBLIOTECA.dir\C_\Users\gmome\Desktop\Project-edoo\aluno.cpp.obj.d
-  FLAGS = -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g
-  INCLUDES = -IC:/Users/gmome/Desktop/Project-edoo/build/GUI_BIBLIOTECA_autogen/include -isystem C:/Qt/6.9.1/mingw_64/include/QtCore -isystem C:/Qt/6.9.1/mingw_64/include -isystem C:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.1/mingw_64/include/QtGui
+build CMakeFiles/GUI_BIBLIOTECA.dir/C_/Users/gmome/Desktop/Project-edoo/backend/src/aluno.cpp.obj: CXX_COMPILER__GUI_BIBLIOTECA_unscanned_Release C$:/Users/gmome/Desktop/Project-edoo/backend/src/aluno.cpp || cmake_object_order_depends_target_GUI_BIBLIOTECA
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\GUI_BIBLIOTECA.dir\C_\Users\gmome\Desktop\Project-edoo\backend\src\aluno.cpp.obj.d
+  FLAGS = -O3 -DNDEBUG
+  INCLUDES = -IC:/Users/gmome/Desktop/Project-edoo/build/GUI_BIBLIOTECA_autogen/include -IC:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/../backend/headers -isystem C:/Qt/6.9.1/mingw_64/include/QtCore -isystem C:/Qt/6.9.1/mingw_64/include -isystem C:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.1/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\GUI_BIBLIOTECA.dir
-  OBJECT_FILE_DIR = CMakeFiles\GUI_BIBLIOTECA.dir\C_\Users\gmome\Desktop\Project-edoo
+  OBJECT_FILE_DIR = CMakeFiles\GUI_BIBLIOTECA.dir\C_\Users\gmome\Desktop\Project-edoo\backend\src
 
-build CMakeFiles/GUI_BIBLIOTECA.dir/C_/Users/gmome/Desktop/Project-edoo/professor.cpp.obj: CXX_COMPILER__GUI_BIBLIOTECA_unscanned_Debug C$:/Users/gmome/Desktop/Project-edoo/professor.cpp || cmake_object_order_depends_target_GUI_BIBLIOTECA
-  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\GUI_BIBLIOTECA.dir\C_\Users\gmome\Desktop\Project-edoo\professor.cpp.obj.d
-  FLAGS = -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g
-  INCLUDES = -IC:/Users/gmome/Desktop/Project-edoo/build/GUI_BIBLIOTECA_autogen/include -isystem C:/Qt/6.9.1/mingw_64/include/QtCore -isystem C:/Qt/6.9.1/mingw_64/include -isystem C:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.1/mingw_64/include/QtGui
+build CMakeFiles/GUI_BIBLIOTECA.dir/C_/Users/gmome/Desktop/Project-edoo/backend/src/professor.cpp.obj: CXX_COMPILER__GUI_BIBLIOTECA_unscanned_Release C$:/Users/gmome/Desktop/Project-edoo/backend/src/professor.cpp || cmake_object_order_depends_target_GUI_BIBLIOTECA
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\GUI_BIBLIOTECA.dir\C_\Users\gmome\Desktop\Project-edoo\backend\src\professor.cpp.obj.d
+  FLAGS = -O3 -DNDEBUG
+  INCLUDES = -IC:/Users/gmome/Desktop/Project-edoo/build/GUI_BIBLIOTECA_autogen/include -IC:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/../backend/headers -isystem C:/Qt/6.9.1/mingw_64/include/QtCore -isystem C:/Qt/6.9.1/mingw_64/include -isystem C:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.1/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\GUI_BIBLIOTECA.dir
-  OBJECT_FILE_DIR = CMakeFiles\GUI_BIBLIOTECA.dir\C_\Users\gmome\Desktop\Project-edoo
+  OBJECT_FILE_DIR = CMakeFiles\GUI_BIBLIOTECA.dir\C_\Users\gmome\Desktop\Project-edoo\backend\src
 
-build CMakeFiles/GUI_BIBLIOTECA.dir/C_/Users/gmome/Desktop/Project-edoo/acervo.cpp.obj: CXX_COMPILER__GUI_BIBLIOTECA_unscanned_Debug C$:/Users/gmome/Desktop/Project-edoo/acervo.cpp || cmake_object_order_depends_target_GUI_BIBLIOTECA
-  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\GUI_BIBLIOTECA.dir\C_\Users\gmome\Desktop\Project-edoo\acervo.cpp.obj.d
-  FLAGS = -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g
-  INCLUDES = -IC:/Users/gmome/Desktop/Project-edoo/build/GUI_BIBLIOTECA_autogen/include -isystem C:/Qt/6.9.1/mingw_64/include/QtCore -isystem C:/Qt/6.9.1/mingw_64/include -isystem C:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.1/mingw_64/include/QtGui
+build CMakeFiles/GUI_BIBLIOTECA.dir/C_/Users/gmome/Desktop/Project-edoo/backend/src/acervo.cpp.obj: CXX_COMPILER__GUI_BIBLIOTECA_unscanned_Release C$:/Users/gmome/Desktop/Project-edoo/backend/src/acervo.cpp || cmake_object_order_depends_target_GUI_BIBLIOTECA
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\GUI_BIBLIOTECA.dir\C_\Users\gmome\Desktop\Project-edoo\backend\src\acervo.cpp.obj.d
+  FLAGS = -O3 -DNDEBUG
+  INCLUDES = -IC:/Users/gmome/Desktop/Project-edoo/build/GUI_BIBLIOTECA_autogen/include -IC:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/../backend/headers -isystem C:/Qt/6.9.1/mingw_64/include/QtCore -isystem C:/Qt/6.9.1/mingw_64/include -isystem C:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.1/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\GUI_BIBLIOTECA.dir
-  OBJECT_FILE_DIR = CMakeFiles\GUI_BIBLIOTECA.dir\C_\Users\gmome\Desktop\Project-edoo
+  OBJECT_FILE_DIR = CMakeFiles\GUI_BIBLIOTECA.dir\C_\Users\gmome\Desktop\Project-edoo\backend\src
 
-build CMakeFiles/GUI_BIBLIOTECA.dir/C_/Users/gmome/Desktop/Project-edoo/livros.cpp.obj: CXX_COMPILER__GUI_BIBLIOTECA_unscanned_Debug C$:/Users/gmome/Desktop/Project-edoo/livros.cpp || cmake_object_order_depends_target_GUI_BIBLIOTECA
-  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\GUI_BIBLIOTECA.dir\C_\Users\gmome\Desktop\Project-edoo\livros.cpp.obj.d
-  FLAGS = -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g
-  INCLUDES = -IC:/Users/gmome/Desktop/Project-edoo/build/GUI_BIBLIOTECA_autogen/include -isystem C:/Qt/6.9.1/mingw_64/include/QtCore -isystem C:/Qt/6.9.1/mingw_64/include -isystem C:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.1/mingw_64/include/QtGui
+build CMakeFiles/GUI_BIBLIOTECA.dir/C_/Users/gmome/Desktop/Project-edoo/backend/src/livros.cpp.obj: CXX_COMPILER__GUI_BIBLIOTECA_unscanned_Release C$:/Users/gmome/Desktop/Project-edoo/backend/src/livros.cpp || cmake_object_order_depends_target_GUI_BIBLIOTECA
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\GUI_BIBLIOTECA.dir\C_\Users\gmome\Desktop\Project-edoo\backend\src\livros.cpp.obj.d
+  FLAGS = -O3 -DNDEBUG
+  INCLUDES = -IC:/Users/gmome/Desktop/Project-edoo/build/GUI_BIBLIOTECA_autogen/include -IC:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/../backend/headers -isystem C:/Qt/6.9.1/mingw_64/include/QtCore -isystem C:/Qt/6.9.1/mingw_64/include -isystem C:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.1/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\GUI_BIBLIOTECA.dir
-  OBJECT_FILE_DIR = CMakeFiles\GUI_BIBLIOTECA.dir\C_\Users\gmome\Desktop\Project-edoo
+  OBJECT_FILE_DIR = CMakeFiles\GUI_BIBLIOTECA.dir\C_\Users\gmome\Desktop\Project-edoo\backend\src
 
-build CMakeFiles/GUI_BIBLIOTECA.dir/loanbookwindow.cpp.obj: CXX_COMPILER__GUI_BIBLIOTECA_unscanned_Debug C$:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/loanbookwindow.cpp || cmake_object_order_depends_target_GUI_BIBLIOTECA
-  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+build CMakeFiles/GUI_BIBLIOTECA.dir/loanbookwindow.cpp.obj: CXX_COMPILER__GUI_BIBLIOTECA_unscanned_Release C$:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/loanbookwindow.cpp || cmake_object_order_depends_target_GUI_BIBLIOTECA
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\GUI_BIBLIOTECA.dir\loanbookwindow.cpp.obj.d
-  FLAGS = -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g
-  INCLUDES = -IC:/Users/gmome/Desktop/Project-edoo/build/GUI_BIBLIOTECA_autogen/include -isystem C:/Qt/6.9.1/mingw_64/include/QtCore -isystem C:/Qt/6.9.1/mingw_64/include -isystem C:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.1/mingw_64/include/QtGui
+  FLAGS = -O3 -DNDEBUG
+  INCLUDES = -IC:/Users/gmome/Desktop/Project-edoo/build/GUI_BIBLIOTECA_autogen/include -IC:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/../backend/headers -isystem C:/Qt/6.9.1/mingw_64/include/QtCore -isystem C:/Qt/6.9.1/mingw_64/include -isystem C:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.1/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\GUI_BIBLIOTECA.dir
   OBJECT_FILE_DIR = CMakeFiles\GUI_BIBLIOTECA.dir
 
-build CMakeFiles/GUI_BIBLIOTECA.dir/seeallbookswindow.cpp.obj: CXX_COMPILER__GUI_BIBLIOTECA_unscanned_Debug C$:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/seeallbookswindow.cpp || cmake_object_order_depends_target_GUI_BIBLIOTECA
-  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+build CMakeFiles/GUI_BIBLIOTECA.dir/seeallbookswindow.cpp.obj: CXX_COMPILER__GUI_BIBLIOTECA_unscanned_Release C$:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/seeallbookswindow.cpp || cmake_object_order_depends_target_GUI_BIBLIOTECA
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\GUI_BIBLIOTECA.dir\seeallbookswindow.cpp.obj.d
-  FLAGS = -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g
-  INCLUDES = -IC:/Users/gmome/Desktop/Project-edoo/build/GUI_BIBLIOTECA_autogen/include -isystem C:/Qt/6.9.1/mingw_64/include/QtCore -isystem C:/Qt/6.9.1/mingw_64/include -isystem C:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.1/mingw_64/include/QtGui
+  FLAGS = -O3 -DNDEBUG
+  INCLUDES = -IC:/Users/gmome/Desktop/Project-edoo/build/GUI_BIBLIOTECA_autogen/include -IC:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/../backend/headers -isystem C:/Qt/6.9.1/mingw_64/include/QtCore -isystem C:/Qt/6.9.1/mingw_64/include -isystem C:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.1/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\GUI_BIBLIOTECA.dir
   OBJECT_FILE_DIR = CMakeFiles\GUI_BIBLIOTECA.dir
 
-build CMakeFiles/GUI_BIBLIOTECA.dir/userbookswindow.cpp.obj: CXX_COMPILER__GUI_BIBLIOTECA_unscanned_Debug C$:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/userbookswindow.cpp || cmake_object_order_depends_target_GUI_BIBLIOTECA
-  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+build CMakeFiles/GUI_BIBLIOTECA.dir/userbookswindow.cpp.obj: CXX_COMPILER__GUI_BIBLIOTECA_unscanned_Release C$:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/userbookswindow.cpp || cmake_object_order_depends_target_GUI_BIBLIOTECA
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\GUI_BIBLIOTECA.dir\userbookswindow.cpp.obj.d
-  FLAGS = -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g
-  INCLUDES = -IC:/Users/gmome/Desktop/Project-edoo/build/GUI_BIBLIOTECA_autogen/include -isystem C:/Qt/6.9.1/mingw_64/include/QtCore -isystem C:/Qt/6.9.1/mingw_64/include -isystem C:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.1/mingw_64/include/QtGui
+  FLAGS = -O3 -DNDEBUG
+  INCLUDES = -IC:/Users/gmome/Desktop/Project-edoo/build/GUI_BIBLIOTECA_autogen/include -IC:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA/../backend/headers -isystem C:/Qt/6.9.1/mingw_64/include/QtCore -isystem C:/Qt/6.9.1/mingw_64/include -isystem C:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.9.1/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\GUI_BIBLIOTECA.dir
   OBJECT_FILE_DIR = CMakeFiles\GUI_BIBLIOTECA.dir
 
@@ -177,8 +177,8 @@ build CMakeFiles/GUI_BIBLIOTECA.dir/userbookswindow.cpp.obj: CXX_COMPILER__GUI_B
 #############################################
 # Link the executable GUI_BIBLIOTECA.exe
 
-build GUI_BIBLIOTECA.exe: CXX_EXECUTABLE_LINKER__GUI_BIBLIOTECA_Debug CMakeFiles/GUI_BIBLIOTECA.dir/GUI_BIBLIOTECA_autogen/mocs_compilation.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/main.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/mainwindow.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/loginwindow.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/registrationwindow.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/addbookwindow.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/C_/Users/gmome/Desktop/Project-edoo/cadastros.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/C_/Users/gmome/Desktop/Project-edoo/usuario.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/C_/Users/gmome/Desktop/Project-edoo/aluno.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/C_/Users/gmome/Desktop/Project-edoo/professor.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/C_/Users/gmome/Desktop/Project-edoo/acervo.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/C_/Users/gmome/Desktop/Project-edoo/livros.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/loanbookwindow.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/seeallbookswindow.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/userbookswindow.cpp.obj | C$:/Qt/6.9.1/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.9.1/mingw_64/lib/libQt6Gui.a C$:/Qt/6.9.1/mingw_64/lib/libQt6Core.a C$:/Qt/6.9.1/mingw_64/lib/libQt6EntryPoint.a || GUI_BIBLIOTECA_autogen GUI_BIBLIOTECA_autogen_timestamp_deps
-  FLAGS = -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g
+build GUI_BIBLIOTECA.exe: CXX_EXECUTABLE_LINKER__GUI_BIBLIOTECA_Release CMakeFiles/GUI_BIBLIOTECA.dir/GUI_BIBLIOTECA_autogen/mocs_compilation.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/main.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/mainwindow.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/loginwindow.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/registrationwindow.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/addbookwindow.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/C_/Users/gmome/Desktop/Project-edoo/backend/src/cadastros.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/C_/Users/gmome/Desktop/Project-edoo/backend/src/usuario.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/C_/Users/gmome/Desktop/Project-edoo/backend/src/aluno.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/C_/Users/gmome/Desktop/Project-edoo/backend/src/professor.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/C_/Users/gmome/Desktop/Project-edoo/backend/src/acervo.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/C_/Users/gmome/Desktop/Project-edoo/backend/src/livros.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/loanbookwindow.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/seeallbookswindow.cpp.obj CMakeFiles/GUI_BIBLIOTECA.dir/userbookswindow.cpp.obj | C$:/Qt/6.9.1/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.9.1/mingw_64/lib/libQt6Gui.a C$:/Qt/6.9.1/mingw_64/lib/libQt6Core.a C$:/Qt/6.9.1/mingw_64/lib/libQt6EntryPoint.a || GUI_BIBLIOTECA_autogen GUI_BIBLIOTECA_autogen_timestamp_deps
+  FLAGS = -O3 -DNDEBUG
   LINK_FLAGS = -mwindows
   LINK_LIBRARIES = C:/Qt/6.9.1/mingw_64/lib/libQt6Widgets.a  C:/Qt/6.9.1/mingw_64/lib/libQt6Gui.a  C:/Qt/6.9.1/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lmingw32  C:/Qt/6.9.1/mingw_64/lib/libQt6EntryPoint.a  -lshell32  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\GUI_BIBLIOTECA.dir
@@ -271,7 +271,7 @@ build GUI_BIBLIOTECA_autogen: phony CMakeFiles/GUI_BIBLIOTECA_autogen GUI_BIBLIO
 # Custom command for GUI_BIBLIOTECA_autogen\timestamp
 
 build GUI_BIBLIOTECA_autogen/timestamp GUI_BIBLIOTECA_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}GUI_BIBLIOTECA_autogen/timestamp ${cmake_ninja_workdir}GUI_BIBLIOTECA_autogen/mocs_compilation.cpp: CUSTOM_COMMAND C$:/Qt/6.9.1/mingw_64/bin/moc.exe C$:/Qt/6.9.1/mingw_64/bin/uic.exe || GUI_BIBLIOTECA_autogen_timestamp_deps
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\gmome\Desktop\Project-edoo\build && C:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autogen C:/Users/gmome/Desktop/Project-edoo/build/CMakeFiles/GUI_BIBLIOTECA_autogen.dir/AutogenInfo.json Debug && C:\Qt\Tools\CMake_64\bin\cmake.exe -E touch C:/Users/gmome/Desktop/Project-edoo/build/GUI_BIBLIOTECA_autogen/timestamp && C:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_transform_depfile Ninja gccdepfile C:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA C:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA C:/Users/gmome/Desktop/Project-edoo/build C:/Users/gmome/Desktop/Project-edoo/build C:/Users/gmome/Desktop/Project-edoo/build/GUI_BIBLIOTECA_autogen/deps C:/Users/gmome/Desktop/Project-edoo/build/CMakeFiles/d/88c990b9828e220f8a70f24162f35430207badfeb553fd971a47949977254114.d"
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\gmome\Desktop\Project-edoo\build && C:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autogen C:/Users/gmome/Desktop/Project-edoo/build/CMakeFiles/GUI_BIBLIOTECA_autogen.dir/AutogenInfo.json Release && C:\Qt\Tools\CMake_64\bin\cmake.exe -E touch C:/Users/gmome/Desktop/Project-edoo/build/GUI_BIBLIOTECA_autogen/timestamp && C:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_transform_depfile Ninja gccdepfile C:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA C:/Users/gmome/Desktop/Project-edoo/GUI_BIBLIOTECA C:/Users/gmome/Desktop/Project-edoo/build C:/Users/gmome/Desktop/Project-edoo/build C:/Users/gmome/Desktop/Project-edoo/build/GUI_BIBLIOTECA_autogen/deps C:/Users/gmome/Desktop/Project-edoo/build/CMakeFiles/d/88c990b9828e220f8a70f24162f35430207badfeb553fd971a47949977254114.d"
   DESC = Automatic MOC and UIC for target GUI_BIBLIOTECA
   depfile = CMakeFiles\d\88c990b9828e220f8a70f24162f35430207badfeb553fd971a47949977254114.d
   deps = gcc
@@ -319,7 +319,7 @@ build C$:/Qt/6.9.1/mingw_64/lib/cmake/Qt6CorePrivate/Qt6CorePrivateAdditionalTar
 # Clean additional files.
 
 build CMakeFiles/clean.additional: CLEAN_ADDITIONAL
-  CONFIG = Debug
+  CONFIG = Release
 
 
 #############################################

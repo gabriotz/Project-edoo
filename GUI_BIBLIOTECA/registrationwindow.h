@@ -2,7 +2,7 @@
 #define REGISTRATIONWINDOW_H
 
 #include <QDialog>
-#include "../cadastros.h" // Inclua o cabeçalho do backend
+#include "cadastros.h" // Inclua o cabeçalho do backend
 
 namespace Ui {
 class RegistrationWindow;

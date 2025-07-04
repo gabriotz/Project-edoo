@@ -331,42 +331,6 @@
 			"MU",
 			"EWIEGA46WW/moc_userbookswindow.cpp",
 			null
-		],
-		[
-			"C:/Users/gmome/Desktop/Project-edoo/acervo.h",
-			"MU",
-			"GGO4ZWXKGR/moc_acervo.cpp",
-			null
-		],
-		[
-			"C:/Users/gmome/Desktop/Project-edoo/aluno.h",
-			"MU",
-			"GGO4ZWXKGR/moc_aluno.cpp",
-			null
-		],
-		[
-			"C:/Users/gmome/Desktop/Project-edoo/cadastros.h",
-			"MU",
-			"GGO4ZWXKGR/moc_cadastros.cpp",
-			null
-		],
-		[
-			"C:/Users/gmome/Desktop/Project-edoo/livros.h",
-			"MU",
-			"GGO4ZWXKGR/moc_livros.cpp",
-			null
-		],
-		[
-			"C:/Users/gmome/Desktop/Project-edoo/professor.h",
-			"MU",
-			"GGO4ZWXKGR/moc_professor.cpp",
-			null
-		],
-		[
-			"C:/Users/gmome/Desktop/Project-edoo/usuario.h",
-			"MU",
-			"GGO4ZWXKGR/moc_usuario.cpp",
-			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -378,6 +342,7 @@
 		"QT_CORE_LIB",
 		"QT_GUI_LIB",
 		"QT_NEEDS_QMAIN",
+		"QT_NO_DEBUG",
 		"QT_WIDGETS_LIB",
 		"UNICODE",
 		"WIN32",
@@ -395,6 +360,7 @@
 	],
 	"MOC_INCLUDES" : 
 	[
+		"C:/Users/gmome/Desktop/Project-edoo/backend/headers",
 		"C:/Qt/6.9.1/mingw_64/include/QtCore",
 		"C:/Qt/6.9.1/mingw_64/include",
 		"C:/Qt/6.9.1/mingw_64/mkspecs/win32-g++",
@@ -479,12 +445,36 @@
 			"MU",
 			null
 		],
-		[ "C:/Users/gmome/Desktop/Project-edoo/acervo.cpp", "MU", null ],
-		[ "C:/Users/gmome/Desktop/Project-edoo/aluno.cpp", "MU", null ],
-		[ "C:/Users/gmome/Desktop/Project-edoo/cadastros.cpp", "MU", null ],
-		[ "C:/Users/gmome/Desktop/Project-edoo/livros.cpp", "MU", null ],
-		[ "C:/Users/gmome/Desktop/Project-edoo/professor.cpp", "MU", null ],
-		[ "C:/Users/gmome/Desktop/Project-edoo/usuario.cpp", "MU", null ]
+		[
+			"C:/Users/gmome/Desktop/Project-edoo/backend/src/acervo.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/gmome/Desktop/Project-edoo/backend/src/aluno.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/gmome/Desktop/Project-edoo/backend/src/cadastros.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/gmome/Desktop/Project-edoo/backend/src/livros.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/gmome/Desktop/Project-edoo/backend/src/professor.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/gmome/Desktop/Project-edoo/backend/src/usuario.cpp",
+			"MU",
+			null
+		]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],
