@@ -47,9 +47,18 @@
     <rect>
      <x>40</x>
      <y>140</y>
-     <width>75</width>
-     <height>24</height>
+     <width>111</width>
+     <height>41</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: white;
+color: #ED1C24;
+border: 2px solid #ED1C24;
+padding: 8px 16px;
+font-size: 14px;
+font-weight: bold;
+border-radius: 8px;</string>
    </property>
    <property name="text">
     <string>Anterior</string>
@@ -58,11 +67,20 @@
   <widget class="QPushButton" name="nextButton">
    <property name="geometry">
     <rect>
-     <x>270</x>
+     <x>210</x>
      <y>140</y>
-     <width>75</width>
-     <height>24</height>
+     <width>121</width>
+     <height>41</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: white;
+color: #ED1C24;
+border: 2px solid #ED1C24;
+padding: 8px 16px;
+font-size: 14px;
+font-weight: bold;
+border-radius: 8px;</string>
    </property>
    <property name="text">
     <string>Proximo</string>

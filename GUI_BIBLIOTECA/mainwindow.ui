@@ -6,91 +6,144 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>450</width>
-    <height>368</height>
+    <width>717</width>
+    <height>440</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="welcomeLabel">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>50</y>
-      <width>71</width>
-      <height>16</height>
+      <x>40</x>
+      <y>0</y>
+      <width>641</width>
+      <height>365</height>
      </rect>
     </property>
-    <property name="text">
-     <string>Olá, usuario</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="addBookButton">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>80</y>
-      <width>271</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>DOAR UM LIVRO PARA A BIBLIOTECA</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="loanBookButton">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>160</y>
-      <width>271</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>REALIZAR EMPRESTIMO/DEVOLUÇÃO DE LIVRO</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="seeBookButton">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>200</y>
-      <width>271</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>VER MEUS LIVROS</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="seeAllBooksButton">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>120</y>
-      <width>271</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>VER LIVROS NA BIBLIOTECA</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="logoutButton">
-    <property name="geometry">
-     <rect>
-      <x>330</x>
-      <y>270</y>
-      <width>75</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>DESLOGAR</string>
-    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="welcomeLabel">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:700; color:#2d2d2d;&quot;&gt;Olá, Usuário!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="seeBookButton">
+       <property name="styleSheet">
+        <string notr="true">background-color: white;
+color: #ED1C24;
+border: 2px solid #ED1C24;
+padding: 15px 30px;
+border-radius: 12px;
+text-align: center;
+
+font: 700 14pt &quot;Segoe UI&quot;;</string>
+       </property>
+       <property name="text">
+        <string>VER MEUS LIVROS</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="seeAllBooksButton">
+       <property name="styleSheet">
+        <string notr="true">background-color: white;
+color: #ED1C24;
+border: 2px solid #ED1C24;
+padding: 15px 30px;
+border-radius: 12px;
+text-align: center;
+
+font: 700 14pt &quot;Segoe UI&quot;;</string>
+       </property>
+       <property name="text">
+        <string>VER LIVROS NA BIBLIOTECA</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="loanBookButton">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #8B0000, stop:1 #ED1C24);
+color: white;
+border: none;
+padding: 20px 40px; /* Botões maiores e mais proeminentes */
+border-radius: 15px;
+text-align: center;
+
+font: 700 16pt &quot;Segoe UI&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Fazer Empréstimo</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="addBookButton">
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;AA&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #FFA500, stop:1 #FF6A00); /* Laranja */
+color: white;
+border: none;
+padding: 20px 40px;
+border-radius: 15px;
+text-align: center;
+font: 700 16pt &quot;Segoe UI&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Fazer Doação</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="logoutButton">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: white;
+    color: #ED1C24;
+    border: 2px solid #ED1C24;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+QPushButton#deslogarButton:hover {
+    background-color: #FFE5E5;
+}</string>
+       </property>
+       <property name="text">
+        <string>DESLOGAR</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -98,8 +151,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>450</width>
-     <height>22</height>
+     <width>717</width>
+     <height>21</height>
     </rect>
    </property>
   </widget>

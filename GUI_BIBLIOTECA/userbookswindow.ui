@@ -39,11 +39,20 @@
   <widget class="QPushButton" name="returnButton">
    <property name="geometry">
     <rect>
-     <x>220</x>
+     <x>130</x>
      <y>180</y>
-     <width>75</width>
-     <height>24</height>
+     <width>131</width>
+     <height>61</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: white;
+color: #ED1C24;
+border: 2px solid #ED1C24;
+padding: 8px 16px;
+font-size: 14px;
+font-weight: bold;
+border-radius: 8px;</string>
    </property>
    <property name="text">
     <string>DEVOLVER</string>

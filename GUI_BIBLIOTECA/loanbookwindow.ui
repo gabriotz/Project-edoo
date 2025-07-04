@@ -42,11 +42,25 @@
   <widget class="QPushButton" name="loanButton">
    <property name="geometry">
     <rect>
-     <x>100</x>
+     <x>90</x>
      <y>290</y>
-     <width>111</width>
-     <height>24</height>
+     <width>171</width>
+     <height>51</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: qlineargradient(
+    x1:0, y1:0, x2:1, y2:0,
+    stop:0 #8B0000, stop:1 #ED1C24
+);
+color: white;
+border: none;
+padding: 12px 20px;
+font-size: 15px;
+font-weight: bold;
+border-radius: 10px;
+text-align: center;
+</string>
    </property>
    <property name="text">
     <string>Pegar emprestado</string>
@@ -57,9 +71,18 @@
     <rect>
      <x>10</x>
      <y>230</y>
-     <width>75</width>
-     <height>24</height>
+     <width>111</width>
+     <height>41</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: white;
+color: #ED1C24;
+border: 2px solid #ED1C24;
+padding: 8px 16px;
+font-size: 14px;
+font-weight: bold;
+border-radius: 8px;</string>
    </property>
    <property name="text">
     <string>anterior</string>
@@ -68,11 +91,20 @@
   <widget class="QPushButton" name="nextButton">
    <property name="geometry">
     <rect>
-     <x>240</x>
+     <x>200</x>
      <y>230</y>
-     <width>75</width>
-     <height>24</height>
+     <width>121</width>
+     <height>41</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: white;
+color: #ED1C24;
+border: 2px solid #ED1C24;
+padding: 8px 16px;
+font-size: 14px;
+font-weight: bold;
+border-radius: 8px;</string>
    </property>
    <property name="text">
     <string>proximo</string>
