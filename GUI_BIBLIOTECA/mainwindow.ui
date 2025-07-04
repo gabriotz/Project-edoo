@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1290</width>
-    <height>683</height>
+    <width>800</width>
+    <height>450</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -29,10 +29,10 @@
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>0</y>
-      <width>1251</width>
-      <height>365</height>
+      <x>70</x>
+      <y>50</y>
+      <width>661</width>
+      <height>363</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -56,7 +56,7 @@ text-align: center;
 font: 700 14pt &quot;Segoe UI&quot;;</string>
        </property>
        <property name="text">
-        <string>VER MEUS LIVROS</string>
+        <string>MEUS LIVROS</string>
        </property>
       </widget>
      </item>
@@ -73,7 +73,7 @@ text-align: center;
 font: 700 14pt &quot;Segoe UI&quot;;</string>
        </property>
        <property name="text">
-        <string>VER LIVROS NA BIBLIOTECA</string>
+        <string>CATÁLOGO DA BIBLIOTECA</string>
        </property>
       </widget>
      </item>
@@ -96,7 +96,7 @@ text-align: center;
 font: 700 16pt &quot;Segoe UI&quot;;</string>
        </property>
        <property name="text">
-        <string>FAZER EMPRÉSTIMO</string>
+        <string>EMPRÉSTIMO DE LIVRO</string>
        </property>
       </widget>
      </item>
@@ -118,7 +118,7 @@ text-align: center;
 font: 700 16pt &quot;Segoe UI&quot;;</string>
        </property>
        <property name="text">
-        <string>FAZER DOAÇÃO</string>
+        <string>DOAÇÃO DE LIVRO</string>
        </property>
       </widget>
      </item>
@@ -151,7 +151,7 @@ QPushButton#deslogarButton:hover {
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1290</width>
+     <width>800</width>
      <height>21</height>
     </rect>
    </property>
