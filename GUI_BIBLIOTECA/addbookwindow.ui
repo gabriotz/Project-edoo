@@ -29,9 +29,9 @@
   <widget class="QPushButton" name="addBookButton">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>280</y>
-     <width>131</width>
+     <x>70</x>
+     <y>230</y>
+     <width>261</width>
      <height>61</height>
     </rect>
    </property>
@@ -51,16 +51,16 @@ text-align: center;
 </string>
    </property>
    <property name="text">
-    <string>Adicionar</string>
+    <string>ADICIONAR</string>
    </property>
   </widget>
   <widget class="QSplitter" name="splitter_5">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>90</y>
-     <width>381</width>
-     <height>108</height>
+     <x>0</x>
+     <y>57</y>
+     <width>391</width>
+     <height>160</height>
     </rect>
    </property>
    <property name="orientation">

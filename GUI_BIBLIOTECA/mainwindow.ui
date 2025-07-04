@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>717</width>
-    <height>440</height>
+    <width>1290</width>
+    <height>683</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -31,7 +31,7 @@
      <rect>
       <x>40</x>
       <y>0</y>
-      <width>641</width>
+      <width>1251</width>
       <height>365</height>
      </rect>
     </property>
@@ -96,7 +96,7 @@ text-align: center;
 font: 700 16pt &quot;Segoe UI&quot;;</string>
        </property>
        <property name="text">
-        <string>Fazer Empréstimo</string>
+        <string>FAZER EMPRÉSTIMO</string>
        </property>
       </widget>
      </item>
@@ -118,7 +118,7 @@ text-align: center;
 font: 700 16pt &quot;Segoe UI&quot;;</string>
        </property>
        <property name="text">
-        <string>Fazer Doação</string>
+        <string>FAZER DOAÇÃO</string>
        </property>
       </widget>
      </item>
@@ -151,7 +151,7 @@ QPushButton#deslogarButton:hover {
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>717</width>
+     <width>1290</width>
      <height>21</height>
     </rect>
    </property>

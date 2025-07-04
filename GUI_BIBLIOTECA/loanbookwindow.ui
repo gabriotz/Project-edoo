@@ -16,40 +16,86 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>60</y>
-     <width>121</width>
-     <height>31</height>
+     <x>0</x>
+     <y>50</y>
+     <width>341</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="text">
-    <string>Pegar livro Emprestado</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:700;&quot;&gt;Pegar livro Emprestado&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLabel" name="bookLabel">
    <property name="geometry">
     <rect>
-     <x>90</x>
-     <y>140</y>
-     <width>161</width>
-     <height>51</height>
+     <x>10</x>
+     <y>130</y>
+     <width>321</width>
+     <height>81</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">    background-color: #ED1C24; /* Fundo vermelho CIn */
+    color: white; /* Texto branco */
+    padding: 5px;
+    border: 1px solid #8B0000; /* Borda entre as seções */
+    font-family: &quot;Segoe UI&quot;;
+    font-weight: bold;
+    font-size: 10pt;</string>
    </property>
    <property name="text">
     <string>TextLabel</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="loanButton">
+  <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
-     <x>90</x>
-     <y>290</y>
-     <width>171</width>
-     <height>51</height>
+     <x>0</x>
+     <y>230</y>
+     <width>341</width>
+     <height>140</height>
     </rect>
    </property>
-   <property name="styleSheet">
-    <string notr="true">background: qlineargradient(
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QPushButton" name="nextButton">
+      <property name="styleSheet">
+       <string notr="true">background-color: white;
+color: #ED1C24;
+border: 2px solid #ED1C24;
+padding: 8px 16px;
+font-size: 14px;
+font-weight: bold;
+border-radius: 8px;
+font: 700 12pt &quot;Segoe UI&quot;;</string>
+      </property>
+      <property name="text">
+       <string>PRÓXIMO</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="previousButton">
+      <property name="styleSheet">
+       <string notr="true">background-color: white;
+color: #ED1C24;
+border: 2px solid #ED1C24;
+padding: 8px 16px;
+font-size: 14px;
+font-weight: bold;
+border-radius: 8px;
+font: 700 12pt &quot;Segoe UI&quot;;</string>
+      </property>
+      <property name="text">
+       <string>ANTERIOR</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="loanButton">
+      <property name="styleSheet">
+       <string notr="true">background: qlineargradient(
     x1:0, y1:0, x2:1, y2:0,
     stop:0 #8B0000, stop:1 #ED1C24
 );
@@ -61,54 +107,13 @@ font-weight: bold;
 border-radius: 10px;
 text-align: center;
 </string>
-   </property>
-   <property name="text">
-    <string>Pegar emprestado</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="previousButton">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>230</y>
-     <width>111</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: white;
-color: #ED1C24;
-border: 2px solid #ED1C24;
-padding: 8px 16px;
-font-size: 14px;
-font-weight: bold;
-border-radius: 8px;</string>
-   </property>
-   <property name="text">
-    <string>anterior</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="nextButton">
-   <property name="geometry">
-    <rect>
-     <x>200</x>
-     <y>230</y>
-     <width>121</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: white;
-color: #ED1C24;
-border: 2px solid #ED1C24;
-padding: 8px 16px;
-font-size: 14px;
-font-weight: bold;
-border-radius: 8px;</string>
-   </property>
-   <property name="text">
-    <string>proximo</string>
-   </property>
+      </property>
+      <property name="text">
+       <string>PEGAR EMPRESTADO</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>
