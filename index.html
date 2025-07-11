@@ -69,11 +69,13 @@
             height: auto;
             border-radius: 5px;
             margin-top: 10px;
+            border: 1px solid #ddd;
         }
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
+            gap: 20px;
+            text-align: center;
         }
         footer {
             text-align: center;
@@ -93,18 +95,18 @@
         <div class="section">
             <h2>Sobre o Projeto</h2>
             <p>
-                O Sistema de Biblioteca Virtual é um projeto acadêmico desenvolvido em C++ com o framework Qt. [cite_start]Ele simula as operações de uma biblioteca real, aplicando conceitos de Programação Orientada a Objetos para criar um sistema modular e eficiente. [cite: 133, 136] [cite_start]O sistema gerencia um acervo de livros, diferentes tipos de usuários (alunos e professores) e suas interações, como empréstimos e devoluções. [cite: 136, 145, 173]
+                O Sistema de Biblioteca Virtual é um projeto acadêmico desenvolvido em C++ com o framework Qt. Ele simula as operações de uma biblioteca real, aplicando conceitos de Programação Orientada a Objetos para criar um sistema modular e eficiente. O sistema gerencia um acervo de livros, diferentes tipos de usuários (alunos e professores) e suas interações, como empréstimos e devoluções.
             </p>
         </div>
 
         <div class="section">
             <h2>Principais Funcionalidades</h2>
             <ul class="features-list">
-                [cite_start]<li><b>Cadastro de Usuários:</b> Permite a criação de usuários do tipo Aluno e Professor, cada um com diferentes permissões e limites. [cite: 136, 175, 199]</li>
-                [cite_start]<li><b>Gestão do Acervo:</b> Funcionalidades para adicionar (doar) e remover livros do acervo da biblioteca. [cite: 146, 147]</li>
-                [cite_start]<li><b>Sistema de Empréstimo e Devolução:</b> Usuários podem pegar livros emprestados e devolvê-los. [cite: 136, 186, 187]</li>
-                <li><b>Fila de Espera com Prioridade:</b> Quando um livro está indisponível, os usuários podem entrar em uma fila. [cite_start]Professores têm prioridade sobre os alunos para receber o livro. [cite: 136, 169]</li>
-                [cite_start]<li><b>Interface Gráfica:</b> Interface de usuário intuitiva desenvolvida com o Qt Creator para facilitar a interação com o sistema. [cite: 204]</li>
+                <li><b>Cadastro de Usuários:</b> Permite a criação de usuários do tipo Aluno e Professor, cada um com diferentes permissões e limites.</li>
+                <li><b>Gestão do Acervo:</b> Funcionalidades para adicionar (doar) e remover livros do acervo da biblioteca.</li>
+                <li><b>Sistema de Empréstimo e Devolução:</b> Usuários podem pegar livros emprestados e devolvê-los.</li>
+                <li><b>Fila de Espera com Prioridade:</b> Quando um livro está indisponível, os usuários podem entrar em uma fila. Professores têm prioridade sobre os alunos para receber o livro.</li>
+                <li><b>Interface Gráfica:</b> Interface de usuário intuitiva desenvolvida com o Qt Creator para facilitar a interação com o sistema.</li>
             </ul>
         </div>
 
@@ -113,39 +115,48 @@
             <p>Abaixo, algumas telas que demonstram a interface e a experiência do usuário:</p>
             <div class="gallery">
                 <div>
+                    <h4>Tela de doação</h4>
+                    <img src="assets/doacao.png" alt="Tela de Empréstimo de Livro">
+                </div>
+                <div>
+                    <h4>Menu principal</h4>
+                    <img src="assets/principal.png" alt="Tela de Empréstimo de Livro">
+                </div>
+                <div>
+                    <h4>Tela de Empréstimo</h4>
+                    <img src="assets/emprestimo.png" alt="Tela de Empréstimo de Livro">
+                </div>
+                <div>
+                    <h4>Tela "Meus Livros"</h4>
+                    <img src="assets/meuslivros.png" alt="Tela de Meus Livros para Devolução">
+                </div>
+                <div>
                     <h4>Tela de Login</h4>
-                    <img src="assets/login.png" alt="Tela de Login"> </div>
+                    <img src="assets/login.png" alt="Tela de Login">
+                </div>
                 <div>
                     <h4>Tela de Cadastro</h4>
-                    <img src="assets/cadastro.png" alt="Tela de Cadastro"> </div>
-                <div>
-                    <h4>Menu Principal</h4>
-                    <img src="assets/principal.png" alt="Tela Principal"> </div>
-                <div>
-                    <h4>Doação de Livros</h4>
-                    <img src="assets/doacao.png" alt="Tela de Doação de Livros"> </div>
+                    <img src="assets/cadastro.png" alt="Tela de Cadastro">
+                </div>
                  <div>
                     <h4>Catálogo de Livros</h4>
-                    <img src="assets/catalogo.png" alt="Tela de Catálogo de Livros"> </div>
+                    <img src="assets/catalogo.png" alt="Tela de Catálogo de Livros">
+                </div>
             </div>
         </div>
-        
-        <div class="section">
-            <h2>Diagrama de Classes</h2>
-            <p>A arquitetura orientada a objetos do projeto, com foco em herança, polimorfismo e encapsulamento, é representada pelo seguinte diagrama:</p>
-            <img src="assets/diagrama.png" alt="Diagrama de Classes do Projeto"> </div>
-
 
         <div class="section links">
             <h2>Acesso ao Projeto</h2>
             <p>Explore os recursos do projeto através dos links abaixo:</p>
             <a href="https://github.com/gabriotz/Project-edoo" target="_blank">Código no GitHub</a>
-            <a href="#" target="_blank">Relatório Final</a> <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">Vídeo no YouTube</a> </div>
+            <a href="https://github.com/gabriotz/Project-edoo/blob/main/Gabriel%20Machado%20Oliveira%20de%20Menezes%20-%20Apresenta%C3%A7%C3%A3o%20preliminar.docx?raw=true" target="_blank">Relatório do Projeto</a> 
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Vídeo no YouTube</a>
+        </div>
 
     </div>
 
     <footer>
-        [cite_start]<p>Projeto desenvolvido por Gabriel Machado Oliveira de Menezes e Guilherme Ferreira Máximo.</p> [cite: 133, 134]
+        <p>Projeto desenvolvido por Gabriel Machado Oliveira de Menezes e Guilherme Ferreira Máximo.</p>
     </footer>
 </body>
 </html>
