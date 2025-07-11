@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Biblioteca Virtual</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 960px;
+            margin: auto;
+            overflow: auto;
+            padding: 0 20px;
+        }
+        header {
+            background: #8B0000;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        .section {
+            background: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #8B0000;
+            border-bottom: 2px solid #f4f4f4;
+            padding-bottom: 10px;
+        }
+        .features-list {
+            list-style: none;
+            padding: 0;
+        }
+        .features-list li {
+            background: #e9e9e9;
+            margin-bottom: 5px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .links a {
+            display: inline-block;
+            background: #333;
+            color: #fff;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+        .links a:hover {
+            background: #555;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Projeto: Biblioteca Virtual em C++</h1>
+    </header>
+
+    <div class="container">
+        <div class="section">
+            <h2>Sobre o Projeto</h2>
+            <p>
+                O Sistema de Biblioteca Virtual é um projeto acadêmico desenvolvido em C++ com o framework Qt. [cite_start]Ele simula as operações de uma biblioteca real, aplicando conceitos de Programação Orientada a Objetos para criar um sistema modular e eficiente. [cite: 133, 136] [cite_start]O sistema gerencia um acervo de livros, diferentes tipos de usuários (alunos e professores) e suas interações, como empréstimos e devoluções. [cite: 136, 145, 173]
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Principais Funcionalidades</h2>
+            <ul class="features-list">
+                [cite_start]<li><b>Cadastro de Usuários:</b> Permite a criação de usuários do tipo Aluno e Professor, cada um com diferentes permissões e limites. [cite: 136, 175, 199]</li>
+                [cite_start]<li><b>Gestão do Acervo:</b> Funcionalidades para adicionar (doar) e remover livros do acervo da biblioteca. [cite: 146, 147]</li>
+                [cite_start]<li><b>Sistema de Empréstimo e Devolução:</b> Usuários podem pegar livros emprestados e devolvê-los. [cite: 136, 186, 187]</li>
+                <li><b>Fila de Espera com Prioridade:</b> Quando um livro está indisponível, os usuários podem entrar em uma fila. [cite_start]Professores têm prioridade sobre os alunos para receber o livro. [cite: 136, 169]</li>
+                [cite_start]<li><b>Interface Gráfica:</b> Interface de usuário intuitiva desenvolvida com o Qt Creator para facilitar a interação com o sistema. [cite: 204]</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Demonstração Visual</h2>
+            <p>Abaixo, algumas telas que demonstram a interface e a experiência do usuário:</p>
+            <div class="gallery">
+                <div>
+                    <h4>Tela de Login</h4>
+                    <img src="assets/login.png" alt="Tela de Login"> </div>
+                <div>
+                    <h4>Tela de Cadastro</h4>
+                    <img src="assets/cadastro.png" alt="Tela de Cadastro"> </div>
+                <div>
+                    <h4>Menu Principal</h4>
+                    <img src="assets/principal.png" alt="Tela Principal"> </div>
+                <div>
+                    <h4>Doação de Livros</h4>
+                    <img src="assets/doacao.png" alt="Tela de Doação de Livros"> </div>
+                 <div>
+                    <h4>Catálogo de Livros</h4>
+                    <img src="assets/catalogo.png" alt="Tela de Catálogo de Livros"> </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Diagrama de Classes</h2>
+            <p>A arquitetura orientada a objetos do projeto, com foco em herança, polimorfismo e encapsulamento, é representada pelo seguinte diagrama:</p>
+            <img src="assets/diagrama.png" alt="Diagrama de Classes do Projeto"> </div>
+
+
+        <div class="section links">
+            <h2>Acesso ao Projeto</h2>
+            <p>Explore os recursos do projeto através dos links abaixo:</p>
+            <a href="https://github.com/gabriotz/Project-edoo" target="_blank">Código no GitHub</a>
+            <a href="#" target="_blank">Relatório Final</a> <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">Vídeo no YouTube</a> </div>
+
+    </div>
+
+    <footer>
+        [cite_start]<p>Projeto desenvolvido por Gabriel Machado Oliveira de Menezes e Guilherme Ferreira Máximo.</p> [cite: 133, 134]
+    </footer>
+</body>
+</html>
